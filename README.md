@@ -12,3 +12,7 @@ gem install bundler
 ```
 bundle install
 ```
+5. Install CocoaPods dependencies
+```
+bundle exec pod install
+```

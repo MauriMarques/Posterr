@@ -1,0 +1,40 @@
+disabled_rules:
+  - function_parameter_count
+opt_in_rules:
+  - control_statement
+  - empty_count
+  - empty_string
+  - trailing_newline
+  - colon
+  - comma
+  - force_unwrapping
+included:
+  - Posterr
+excluded:
+  - Pods
+  - PosterrTests
+  - PosterrUITests
+
+force_unwrapping: error
+
+force_cast: error
+
+force_try:
+  severity: error
+
+type_body_length:
+  - 300
+  - 400
+
+file_length:
+  warning: 500
+  error: 800
+
+type_name:
+  min_length:
+    warning: 4
+    error: 2
+  max_length:
+    warning: 30
+    error: 35
+reporter: "xcode"
