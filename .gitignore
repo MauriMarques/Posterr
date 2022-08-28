@@ -9,3 +9,10 @@ xcuserdata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+### Bundler ###
+Gemfile.lock
+
+### CocoaPods ###
+Pods/
+Podfile.lock
