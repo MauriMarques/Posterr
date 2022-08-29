@@ -15,6 +15,7 @@ struct UserSQLService: UserService {
   private let userTable = Table("User")
   private let idField = Expression<Int>("id")
   private let nameField = Expression<String>("name")
+  private let crationTimestampField = Expression<Int>("creation_timestamp")
 
   init?(dbFilename: String) {
     do {
@@ -38,7 +39,9 @@ struct UserSQLService: UserService {
         return nil
       }
       return User(id: userRegister[idField],
-                  name: userRegister[nameField])
+                  name: userRegister[nameField],
+                  creationTimestamp: TimeInterval(userRegister[crationTimestampField])
+      )
     } catch {
       return nil
     }
