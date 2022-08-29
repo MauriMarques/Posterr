@@ -4,6 +4,7 @@ use_frameworks!
 
 def common_dependecies
   pod 'SwiftLint', '0.47.0'
+  pod 'SQLite.swift', '0.13.3'
 end
 
 target 'Posterr' do
