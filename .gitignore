@@ -16,3 +16,9 @@ Gemfile.lock
 ### CocoaPods ###
 Pods/
 Podfile.lock
+
+### Fastlane ###
+fastlane/README.md
+fastlane/report.xml
+fastlane/slather_coverage
+fastlane/test_output

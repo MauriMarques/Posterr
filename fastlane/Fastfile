@@ -1,0 +1,34 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Run Posterr unit tests and generate coverage report"
+  lane :run_uitests do
+    scan(
+      workspace: "Posterr.xcworkspace",
+      scheme: "PosterrTests",
+      destination: "platform=iOS Simulator,name=iPhone 12 Pro,OS=15.0",
+      clean: true,
+      code_coverage: true,
+      output_directory: "fastlane/test_output"
+    )
+    slather(
+      workspace: "Posterr.xcworkspace",
+      proj: "Posterr.xcodeproj",
+      scheme: "Posterr",
+      html: true,
+      output_directory: "fastlane/slather_coverage"
+    )
+  end
+end
