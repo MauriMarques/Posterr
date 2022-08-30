@@ -13,9 +13,12 @@
 		BD07658228BBD4FE00725121 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07658128BBD4FE00725121 /* ViewController.swift */; };
 		BD07658728BBD50000725121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD07658628BBD50000725121 /* Assets.xcassets */; };
 		BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD07658828BBD50000725121 /* LaunchScreen.storyboard */; };
-		BD07659528BBD50100725121 /* PosterrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07659428BBD50100725121 /* PosterrTests.swift */; };
 		BD07659F28BBD50100725121 /* PosterrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07659E28BBD50100725121 /* PosterrUITests.swift */; };
 		BD0765A128BBD50100725121 /* PosterrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0765A028BBD50100725121 /* PosterrUITestsLaunchTests.swift */; };
+		BD237EED28BE3A52005307C5 /* posterr_test.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FCF28BE37C8004192D4 /* posterr_test.db */; };
+		BD237EF028BE3B8E005307C5 /* InMemorySessionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EEF28BE3B8E005307C5 /* InMemorySessionServiceTests.swift */; };
+		BD237EF328BE3CEF005307C5 /* PostSQLServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EF228BE3CEF005307C5 /* PostSQLServiceTests.swift */; };
+		BD237EF528BE3F4E005307C5 /* SQLDatabaseCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */; };
 		BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FAC28BC1CAF004192D4 /* posterr.db */; };
 		BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */; };
 		BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FB328BCEECB004192D4 /* UserService.swift */; };
@@ -27,6 +30,7 @@
 		BDF96FC528BD6DB1004192D4 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FC428BD6DB1004192D4 /* PostService.swift */; };
 		BDF96FC728BD6DD0004192D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FC628BD6DD0004192D4 /* Post.swift */; };
 		BDF96FC928BD715E004192D4 /* PostSQLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FC828BD715E004192D4 /* PostSQLService.swift */; };
+		BDF96FCD28BE3735004192D4 /* UserSQLServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FCC28BE3735004192D4 /* UserSQLServiceTests.swift */; };
 		CDE672A30CAEBC804DA037A7 /* Pods_PosterrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F16A96968F59B1BD6D3A577 /* Pods_PosterrTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,10 +65,12 @@
 		BD07658928BBD50000725121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD07658B28BBD50000725121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD07659028BBD50100725121 /* PosterrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD07659428BBD50100725121 /* PosterrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrTests.swift; sourceTree = "<group>"; };
 		BD07659A28BBD50100725121 /* PosterrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD07659E28BBD50100725121 /* PosterrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITests.swift; sourceTree = "<group>"; };
 		BD0765A028BBD50100725121 /* PosterrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD237EEF28BE3B8E005307C5 /* InMemorySessionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemorySessionServiceTests.swift; sourceTree = "<group>"; };
+		BD237EF228BE3CEF005307C5 /* PostSQLServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSQLServiceTests.swift; sourceTree = "<group>"; };
+		BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDatabaseCleaner.swift; sourceTree = "<group>"; };
 		BDF96FA628BBF384004192D4 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
 		BDF96FAC28BC1CAF004192D4 /* posterr.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = posterr.db; sourceTree = "<group>"; };
 		BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 		BDF96FC428BD6DB1004192D4 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		BDF96FC628BD6DD0004192D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BDF96FC828BD715E004192D4 /* PostSQLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSQLService.swift; sourceTree = "<group>"; };
+		BDF96FCC28BE3735004192D4 /* UserSQLServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSQLServiceTests.swift; sourceTree = "<group>"; };
+		BDF96FCF28BE37C8004192D4 /* posterr_test.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = posterr_test.db; sourceTree = "<group>"; };
 		D114A9AF0B8B0E1728C9DE6D /* Pods-PosterrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrTests.debug.xcconfig"; path = "Target Support Files/Pods-PosterrTests/Pods-PosterrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB765AFE010F7E1282FA922B /* Pods-Posterr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posterr.debug.xcconfig"; path = "Target Support Files/Pods-Posterr/Pods-Posterr.debug.xcconfig"; sourceTree = "<group>"; };
 		E881794673D885763BB0641C /* Pods-PosterrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrUITests.release.xcconfig"; path = "Target Support Files/Pods-PosterrUITests/Pods-PosterrUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +169,10 @@
 		BD07659328BBD50100725121 /* PosterrTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD07659428BBD50100725121 /* PosterrTests.swift */,
+				BDF96FCE28BE379C004192D4 /* Database */,
+				BD237EF128BE3CDB005307C5 /* PostService */,
+				BD237EEE28BE3B79005307C5 /* SessionService */,
+				BDF96FD128BE37CC004192D4 /* UserService */,
 			);
 			path = PosterrTests;
 			sourceTree = "<group>";
@@ -173,6 +184,22 @@
 				BD0765A028BBD50100725121 /* PosterrUITestsLaunchTests.swift */,
 			);
 			path = PosterrUITests;
+			sourceTree = "<group>";
+		};
+		BD237EEE28BE3B79005307C5 /* SessionService */ = {
+			isa = PBXGroup;
+			children = (
+				BD237EEF28BE3B8E005307C5 /* InMemorySessionServiceTests.swift */,
+			);
+			path = SessionService;
+			sourceTree = "<group>";
+		};
+		BD237EF128BE3CDB005307C5 /* PostService */ = {
+			isa = PBXGroup;
+			children = (
+				BD237EF228BE3CEF005307C5 /* PostSQLServiceTests.swift */,
+			);
+			path = PostService;
 			sourceTree = "<group>";
 		};
 		BDF96FA928BC0D4F004192D4 /* Database */ = {
@@ -229,6 +256,23 @@
 				BDF96FC828BD715E004192D4 /* PostSQLService.swift */,
 			);
 			path = PostService;
+			sourceTree = "<group>";
+		};
+		BDF96FCE28BE379C004192D4 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BDF96FCF28BE37C8004192D4 /* posterr_test.db */,
+				BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		BDF96FD128BE37CC004192D4 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				BDF96FCC28BE3735004192D4 /* UserSQLServiceTests.swift */,
+			);
+			path = UserService;
 			sourceTree = "<group>";
 		};
 		D1D2DE086F1F6EA7FDEBEEDA /* Pods */ = {
@@ -356,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */,
+				BD237EED28BE3A52005307C5 /* posterr_test.db in Resources */,
 				BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */,
 				BD07658728BBD50000725121 /* Assets.xcassets in Resources */,
 			);
@@ -539,7 +584,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD07659528BBD50100725121 /* PosterrTests.swift in Sources */,
+				BD237EF328BE3CEF005307C5 /* PostSQLServiceTests.swift in Sources */,
+				BD237EF028BE3B8E005307C5 /* InMemorySessionServiceTests.swift in Sources */,
+				BD237EF528BE3F4E005307C5 /* SQLDatabaseCleaner.swift in Sources */,
+				BDF96FCD28BE3735004192D4 /* UserSQLServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

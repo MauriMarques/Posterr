@@ -44,3 +44,9 @@ class Post {
     self.parentPost = parentPost
   }
 }
+
+extension Post: Equatable {
+  static func == (lhs: Post, rhs: Post) -> Bool {
+    (lhs.id == rhs.id && lhs.content == rhs.content && lhs.creationTimestamp == rhs.creationTimestamp && lhs.creator == rhs.creator && lhs.parentPost == rhs.parentPost)
+  }
+}

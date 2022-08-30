@@ -62,6 +62,11 @@ struct PostSQLService: PostService {
       return nil
     }
 
+    if let content = content,
+        content.count > PostSQLService.postMaxLength {
+      return nil
+    }
+
     let postTable = Table("Post")
 
     do {
@@ -69,9 +74,6 @@ struct PostSQLService: PostService {
       let insert: Insert
       if let parentPost = parentPost {
         if let content = content {
-          guard content.count <= PostSQLService.postMaxLength else {
-            return nil
-          }
           insert = postTable.insert(PostTableFields.creatorIdField <- creator.id,
                                     PostTableFields.creationTimestampField <- creationTimestamp,
                                     PostTableFields.contentField <- content,
