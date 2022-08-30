@@ -27,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   private func createSession() {
-    guard let userService: UserService? = UserSQLService(dbFilename: "posterr.db"),
-          let user = userService?.userById(1) else {
-            return
-          }
+    let userService: UserService? = UserSQLService()
+    guard let user = userService?.userById(1) else {
+      return
+    }
     print(sessionService.login(user))
     print(sessionService.user)
   }

@@ -24,6 +24,9 @@
 		BDF96FBC28BCEFCD004192D4 /* InMemorySessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FBB28BCEFCD004192D4 /* InMemorySessionService.swift */; };
 		BDF96FBE28BCF045004192D4 /* UserSQLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FBD28BCF045004192D4 /* UserSQLService.swift */; };
 		BDF96FC228BCF9FC004192D4 /* UserLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FC128BCF9FC004192D4 /* UserLogging.swift */; };
+		BDF96FC528BD6DB1004192D4 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FC428BD6DB1004192D4 /* PostService.swift */; };
+		BDF96FC728BD6DD0004192D4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FC628BD6DD0004192D4 /* Post.swift */; };
+		BDF96FC928BD715E004192D4 /* PostSQLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FC828BD715E004192D4 /* PostSQLService.swift */; };
 		CDE672A30CAEBC804DA037A7 /* Pods_PosterrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F16A96968F59B1BD6D3A577 /* Pods_PosterrTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		BDF96FBB28BCEFCD004192D4 /* InMemorySessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemorySessionService.swift; sourceTree = "<group>"; };
 		BDF96FBD28BCF045004192D4 /* UserSQLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSQLService.swift; sourceTree = "<group>"; };
 		BDF96FC128BCF9FC004192D4 /* UserLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogging.swift; sourceTree = "<group>"; };
+		BDF96FC428BD6DB1004192D4 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		BDF96FC628BD6DD0004192D4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BDF96FC828BD715E004192D4 /* PostSQLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSQLService.swift; sourceTree = "<group>"; };
 		D114A9AF0B8B0E1728C9DE6D /* Pods-PosterrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrTests.debug.xcconfig"; path = "Target Support Files/Pods-PosterrTests/Pods-PosterrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB765AFE010F7E1282FA922B /* Pods-Posterr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posterr.debug.xcconfig"; path = "Target Support Files/Pods-Posterr/Pods-Posterr.debug.xcconfig"; sourceTree = "<group>"; };
 		E881794673D885763BB0641C /* Pods-PosterrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrUITests.release.xcconfig"; path = "Target Support Files/Pods-PosterrUITests/Pods-PosterrUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 		BDF96FB128BCEE96004192D4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BDF96FC328BD6D9B004192D4 /* PostService */,
 				BDF96FB828BCEF58004192D4 /* SessionService */,
 				BDF96FB228BCEEB7004192D4 /* UserService */,
 			);
@@ -200,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF96FB628BCEEEF004192D4 /* User.swift */,
+				BDF96FC628BD6DD0004192D4 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +220,15 @@
 				BDF96FC128BCF9FC004192D4 /* UserLogging.swift */,
 			);
 			path = SessionService;
+			sourceTree = "<group>";
+		};
+		BDF96FC328BD6D9B004192D4 /* PostService */ = {
+			isa = PBXGroup;
+			children = (
+				BDF96FC428BD6DB1004192D4 /* PostService.swift */,
+				BDF96FC828BD715E004192D4 /* PostSQLService.swift */,
+			);
+			path = PostService;
 			sourceTree = "<group>";
 		};
 		D1D2DE086F1F6EA7FDEBEEDA /* Pods */ = {
@@ -504,10 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF96FBC28BCEFCD004192D4 /* InMemorySessionService.swift in Sources */,
+				BDF96FC728BD6DD0004192D4 /* Post.swift in Sources */,
 				BDF96FBA28BCEF66004192D4 /* SessionService.swift in Sources */,
 				BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */,
 				BD07658228BBD4FE00725121 /* ViewController.swift in Sources */,
 				BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */,
+				BDF96FC928BD715E004192D4 /* PostSQLService.swift in Sources */,
+				BDF96FC528BD6DB1004192D4 /* PostService.swift in Sources */,
 				BDF96FB728BCEEEF004192D4 /* User.swift in Sources */,
 				BDF96FC228BCF9FC004192D4 /* UserLogging.swift in Sources */,
 				BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */,

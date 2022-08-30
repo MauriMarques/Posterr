@@ -8,7 +8,7 @@
 import Foundation
 
 struct User {
-  let id: Int
+  let id: Int64
   let name: String
   let creationTimestamp: TimeInterval
 }

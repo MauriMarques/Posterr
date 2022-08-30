@@ -8,5 +8,5 @@
 import Foundation
 
 protocol UserService {
-  func userById(_ id: Int) -> User?
+  func userById(_ id: Int64) -> User?
 }

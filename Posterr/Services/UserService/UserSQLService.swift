@@ -8,16 +8,17 @@
 import Foundation
 import SQLite
 
+struct UserTableFields {
+  static let idField = Expression<Int64>("id")
+  static let nameField = Expression<String>("name")
+  static let creationTimestampField = Expression<Int>("creation_timestamp")
+}
+
 struct UserSQLService: UserService {
 
   private let database: Connection?
 
-  private let userTable = Table("User")
-  private let idField = Expression<Int>("id")
-  private let nameField = Expression<String>("name")
-  private let crationTimestampField = Expression<Int>("creation_timestamp")
-
-  init?(dbFilename: String) {
+  init?(dbFilename: String = "posterr.db") {
     do {
       guard let databasePath = DatabaseHelper(dbFilename: dbFilename).localDbFilename else {
         return nil
@@ -28,19 +29,21 @@ struct UserSQLService: UserService {
     }
   }
 
-  func userById(_ userId: Int) -> User? {
+  func userById(_ userId: Int64) -> User? {
     guard let database = database else {
       return nil
     }
 
-    let userQuery = userTable.filter(idField == userId)
+    let userTable = Table("User")
+
+    let userQuery = userTable.filter(UserTableFields.idField == userId)
     do {
       guard let userRegister = try database.pluck(userQuery) else {
         return nil
       }
-      return User(id: userRegister[idField],
-                  name: userRegister[nameField],
-                  creationTimestamp: TimeInterval(userRegister[crationTimestampField])
+      return User(id: userRegister[UserTableFields.idField],
+                  name: userRegister[UserTableFields.nameField],
+                  creationTimestamp: TimeInterval(userRegister[UserTableFields.creationTimestampField])
       )
     } catch {
       return nil
