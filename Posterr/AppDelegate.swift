@@ -13,16 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  let sessionService: SessionService & UserLogging = InMemorySessionService()
+  private let sessionService: SessionService & UserLogging = InMemorySessionService()
+
+  private var homeRouter: HomeRouting?
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    self.window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = ViewController()
-    window?.makeKeyAndVisible()
-
+    window = UIWindow(frame: UIScreen.main.bounds)
     createSession()
-
+    launchHome()
     return true
   }
 
@@ -31,7 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     guard let user = userService?.userById(1) else {
       return
     }
-    print(sessionService.login(user))
-    print(sessionService.user)
+    _ = sessionService.login(user)
+  }
+
+  private func launchHome() {
+    let postService = PostSQLService()
+    guard let window = window,
+          let postService = postService else {
+            return
+          }
+    let homeRouter = HomeBuilder().build(sessionService: sessionService,
+                                         postService: postService)
+    self.homeRouter = homeRouter
+    homeRouter.launch(from: window)
   }
 }
