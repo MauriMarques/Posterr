@@ -27,14 +27,30 @@ class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
+    setUpNavigationBar()
     listener?.didLoad()
+  }
+
+  private func setUpNavigationBar() {
+    let appearance = UINavigationBarAppearance()
+    appearance.configureWithOpaqueBackground()
+    navigationController?.navigationBar.standardAppearance = appearance
+    navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+  }
+
+  @objc
+  private func didClickOnProfileButton() {
+    listener?.didClickOnProfileSection()
   }
 }
 
 extension HomeViewController: HomePresentable {
 
   func loadUser(_ user: User) {
-
+    let profileBarView = ProfileBarView(viewModel: ProfileBarView.ViewModel(userName: user.name))
+    profileBarView.delegate = self
+    let customBarButtonItem = UIBarButtonItem(customView: profileBarView)
+    navigationItem.setLeftBarButton(customBarButtonItem, animated: false)
   }
 
   func loadPosts(_ posts: [Post]) {
@@ -43,5 +59,11 @@ extension HomeViewController: HomePresentable {
 
   func showErrorScreen() {
 
+  }
+}
+
+extension HomeViewController: ProfileBarViewDelegate {
+  func didTapProfileBarView(_ profileBarView: ProfileBarView) {
+    listener?.didClickOnProfileSection()
   }
 }
