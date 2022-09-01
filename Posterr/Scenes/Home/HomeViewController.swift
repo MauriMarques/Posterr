@@ -24,6 +24,32 @@ protocol HomePresentableListener: AnyObject {
 class HomeViewController: UIViewController {
   weak var listener: HomePresentableListener?
 
+  private lazy var postsTableView: PostsTableView = {
+    let tableView = PostsTableView()
+    tableView.dataSource = postsTableViewDataSource
+    tableView.delegate = self
+    return tableView
+  }()
+
+  var postsTableViewDataSource: PostsTableViewDataSourcing {
+    didSet {
+      postsTableView.reloadData()
+    }
+  }
+
+  init(postsTableViewDataSource: PostsTableViewDataSourcing = PostsTableViewDataSource()) {
+    self.postsTableViewDataSource = postsTableViewDataSource
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  override func loadView() {
+    view = postsTableView
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
@@ -47,14 +73,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomePresentable {
 
   func loadUser(_ user: User) {
-    let profileBarView = ProfileBarView(viewModel: ProfileBarView.ViewModel(userName: user.name))
+    let profileBarView = ProfileBarView()
+    profileBarView.userName = user.name
     profileBarView.delegate = self
     let customBarButtonItem = UIBarButtonItem(customView: profileBarView)
     navigationItem.setLeftBarButton(customBarButtonItem, animated: false)
   }
 
   func loadPosts(_ posts: [Post]) {
-
+    self.postsTableViewDataSource.posts = posts
   }
 
   func showErrorScreen() {
@@ -67,3 +94,9 @@ extension HomeViewController: ProfileBarViewDelegate {
     listener?.didClickOnProfileSection()
   }
 }
+
+enum PostTableError: Error {
+  case noPostCellFound
+}
+
+extension HomeViewController: UITableViewDelegate {}

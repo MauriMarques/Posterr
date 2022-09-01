@@ -14,13 +14,17 @@ protocol ProfileBarViewDelegate: AnyObject {
 
 class ProfileBarView: UIView {
 
-  struct ViewModel {
-    let userName: String
+  var userName: String? {
+    didSet {
+      guard let userName = userName else {
+        return
+      }
+      userNameLabel.text = userName
+      profileImage.setImageByUserName(userName)
+    }
   }
 
   weak var delegate: ProfileBarViewDelegate?
-
-  private let viewModel: ViewModel
 
   private lazy var profileImage: ProfileImageView = {
     let imageView = ProfileImageView()
@@ -36,8 +40,7 @@ class ProfileBarView: UIView {
     return label
   }()
 
-  init(viewModel: ViewModel) {
-    self.viewModel = viewModel
+  init() {
     super.init(frame: .zero)
     self.setupCodableView()
   }
@@ -73,26 +76,7 @@ extension ProfileBarView: ViewCodable {
   }
 
   func configureView() {
-    userNameLabel.text = viewModel.userName
-    profileImage.setImageByUserName(viewModel.userName)
-
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView))
     addGestureRecognizer(tapGesture)
-  }
-}
-
-protocol ViewCodable {
-  func buildViewHierarchy()
-  func setupConstraints()
-  func configureView()
-
-  func setupCodableView()
-}
-
-extension ViewCodable {
-  func setupCodableView() {
-    self.buildViewHierarchy()
-    self.setupConstraints()
-    self.configureView()
   }
 }

@@ -25,6 +25,17 @@
 		BD2C16F128BF8F1400E0EF02 /* ProfileBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2C16F028BF8F1400E0EF02 /* ProfileBarView.swift */; };
 		BD2C16F628BF9BA600E0EF02 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2C16F528BF9BA600E0EF02 /* ProfileImageView.swift */; };
 		BD2C16F928BFA96000E0EF02 /* String+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2C16F828BFA96000E0EF02 /* String+Image.swift */; };
+		BD38583E28C0154B00CF9CB3 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38583D28C0154B00CF9CB3 /* PostTableViewCell.swift */; };
+		BD38584028C0158A00CF9CB3 /* ParentPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38583F28C0158A00CF9CB3 /* ParentPostView.swift */; };
+		BD38584228C029D500CF9CB3 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38584128C029D500CF9CB3 /* QuoteTableViewCell.swift */; };
+		BD38584428C02E6400CF9CB3 /* RepostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38584328C02E6400CF9CB3 /* RepostTableViewCell.swift */; };
+		BD38584928C0654500CF9CB3 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38584828C0654500CF9CB3 /* ViewCodable.swift */; };
+		BD38584B28C0672500CF9CB3 /* CellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38584A28C0672500CF9CB3 /* CellIdentifiable.swift */; };
+		BD38584D28C067B700CF9CB3 /* PostHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38584C28C067B700CF9CB3 /* PostHeaderView.swift */; };
+		BD38585228C0DDF900CF9CB3 /* Post+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585128C0DDF900CF9CB3 /* Post+ViewModels.swift */; };
+		BD38585428C13DED00CF9CB3 /* ViewModelSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585328C13DED00CF9CB3 /* ViewModelSettable.swift */; };
+		BD38585628C13E5900CF9CB3 /* PostsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585528C13E5900CF9CB3 /* PostsTableView.swift */; };
+		BD38585A28C14BBA00CF9CB3 /* PostsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585928C14BBA00CF9CB3 /* PostsTableViewDataSource.swift */; };
 		BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FAC28BC1CAF004192D4 /* posterr.db */; };
 		BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */; };
 		BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FB328BCEECB004192D4 /* UserService.swift */; };
@@ -83,6 +94,17 @@
 		BD2C16F028BF8F1400E0EF02 /* ProfileBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBarView.swift; sourceTree = "<group>"; };
 		BD2C16F528BF9BA600E0EF02 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		BD2C16F828BFA96000E0EF02 /* String+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Image.swift"; sourceTree = "<group>"; };
+		BD38583D28C0154B00CF9CB3 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		BD38583F28C0158A00CF9CB3 /* ParentPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPostView.swift; sourceTree = "<group>"; };
+		BD38584128C029D500CF9CB3 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		BD38584328C02E6400CF9CB3 /* RepostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepostTableViewCell.swift; sourceTree = "<group>"; };
+		BD38584828C0654500CF9CB3 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		BD38584A28C0672500CF9CB3 /* CellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiable.swift; sourceTree = "<group>"; };
+		BD38584C28C067B700CF9CB3 /* PostHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderView.swift; sourceTree = "<group>"; };
+		BD38585128C0DDF900CF9CB3 /* Post+ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+ViewModels.swift"; sourceTree = "<group>"; };
+		BD38585328C13DED00CF9CB3 /* ViewModelSettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSettable.swift; sourceTree = "<group>"; };
+		BD38585528C13E5900CF9CB3 /* PostsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableView.swift; sourceTree = "<group>"; };
+		BD38585928C14BBA00CF9CB3 /* PostsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewDataSource.swift; sourceTree = "<group>"; };
 		BDF96FA628BBF384004192D4 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
 		BDF96FAC28BC1CAF004192D4 /* posterr.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = posterr.db; sourceTree = "<group>"; };
 		BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -246,6 +268,7 @@
 		BD2C16F228BF9B6100E0EF02 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BD38585828C14BA900CF9CB3 /* Helpers */,
 				BD2C16F728BFA94300E0EF02 /* Extensions */,
 				BD2C16F428BF9B9400E0EF02 /* Protocols */,
 				BD2C16F328BF9B8F00E0EF02 /* Views */,
@@ -256,7 +279,11 @@
 		BD2C16F328BF9B8F00E0EF02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD38583F28C0158A00CF9CB3 /* ParentPostView.swift */,
+				BD38584C28C067B700CF9CB3 /* PostHeaderView.swift */,
+				BD38585528C13E5900CF9CB3 /* PostsTableView.swift */,
 				BD2C16F528BF9BA600E0EF02 /* ProfileImageView.swift */,
+				BD38584E28C0694200CF9CB3 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +291,9 @@
 		BD2C16F428BF9B9400E0EF02 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				BD38584A28C0672500CF9CB3 /* CellIdentifiable.swift */,
+				BD38584828C0654500CF9CB3 /* ViewCodable.swift */,
+				BD38585328C13DED00CF9CB3 /* ViewModelSettable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -271,9 +301,28 @@
 		BD2C16F728BFA94300E0EF02 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BD38585128C0DDF900CF9CB3 /* Post+ViewModels.swift */,
 				BD2C16F828BFA96000E0EF02 /* String+Image.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BD38584E28C0694200CF9CB3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BD38583D28C0154B00CF9CB3 /* PostTableViewCell.swift */,
+				BD38584128C029D500CF9CB3 /* QuoteTableViewCell.swift */,
+				BD38584328C02E6400CF9CB3 /* RepostTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BD38585828C14BA900CF9CB3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD38585928C14BBA00CF9CB3 /* PostsTableViewDataSource.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BDF96FA928BC0D4F004192D4 /* Database */ = {
@@ -639,23 +688,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD38585428C13DED00CF9CB3 /* ViewModelSettable.swift in Sources */,
 				BDF96FBC28BCEFCD004192D4 /* InMemorySessionService.swift in Sources */,
 				BD2C16F628BF9BA600E0EF02 /* ProfileImageView.swift in Sources */,
 				BDF96FC728BD6DD0004192D4 /* Post.swift in Sources */,
 				BDF96FBA28BCEF66004192D4 /* SessionService.swift in Sources */,
+				BD38585628C13E5900CF9CB3 /* PostsTableView.swift in Sources */,
 				BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */,
+				BD38584B28C0672500CF9CB3 /* CellIdentifiable.swift in Sources */,
 				BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */,
 				BD237EF928BF7414005307C5 /* HomeRouter.swift in Sources */,
+				BD38585228C0DDF900CF9CB3 /* Post+ViewModels.swift in Sources */,
 				BDF96FC928BD715E004192D4 /* PostSQLService.swift in Sources */,
 				BD2C16F928BFA96000E0EF02 /* String+Image.swift in Sources */,
 				BD2C16F128BF8F1400E0EF02 /* ProfileBarView.swift in Sources */,
 				BDF96FC528BD6DB1004192D4 /* PostService.swift in Sources */,
 				BDF96FB728BCEEEF004192D4 /* User.swift in Sources */,
+				BD38583E28C0154B00CF9CB3 /* PostTableViewCell.swift in Sources */,
 				BDF96FC228BCF9FC004192D4 /* UserLogging.swift in Sources */,
+				BD38584428C02E6400CF9CB3 /* RepostTableViewCell.swift in Sources */,
 				BD237EFF28BF7446005307C5 /* HomeViewController.swift in Sources */,
+				BD38585A28C14BBA00CF9CB3 /* PostsTableViewDataSource.swift in Sources */,
+				BD38584928C0654500CF9CB3 /* ViewCodable.swift in Sources */,
+				BD38584D28C067B700CF9CB3 /* PostHeaderView.swift in Sources */,
 				BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */,
 				BD237EFD28BF742C005307C5 /* HomeBuilder.swift in Sources */,
 				BDF96FBE28BCF045004192D4 /* UserSQLService.swift in Sources */,
+				BD38584228C029D500CF9CB3 /* QuoteTableViewCell.swift in Sources */,
+				BD38584028C0158A00CF9CB3 /* ParentPostView.swift in Sources */,
 				BD237EFB28BF741D005307C5 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
