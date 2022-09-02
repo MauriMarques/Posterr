@@ -41,13 +41,20 @@ struct DefaultParentPostViewModel: ParentPostViewModel {
 
 class ParentPostView: UIView {
 
-  lazy var postHeaderView: PostHeaderView = {
+  private let leftBorderView: UIView = {
+    let view = UIView()
+    view.backgroundColor = .black
+    view.translatesAutoresizingMaskIntoConstraints = false
+    return view
+  }()
+
+  private lazy var postHeaderView: PostHeaderView = {
     let postHeaderView = PostHeaderView()
     postHeaderView.translatesAutoresizingMaskIntoConstraints = false
     return postHeaderView
   }()
 
-  lazy var contentLabel: UILabel = {
+  private lazy var contentLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.numberOfLines = 0
@@ -74,12 +81,17 @@ extension ParentPostView: ViewModelSettable {
 extension ParentPostView: ViewCodable {
 
   func buildViewHierarchy() {
+    addSubview(leftBorderView)
     addSubview(postHeaderView)
     addSubview(contentLabel)
   }
 
   func setupConstraints() {
     NSLayoutConstraint.activate([
+      leftBorderView.widthAnchor.constraint(equalToConstant: 3.0),
+      leftBorderView.trailingAnchor.constraint(equalTo: leadingAnchor),
+      leftBorderView.topAnchor.constraint(equalTo: topAnchor),
+      leftBorderView.bottomAnchor.constraint(equalTo: bottomAnchor),
       postHeaderView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10.0),
       postHeaderView.topAnchor.constraint(equalTo: topAnchor, constant: 10.0),
       contentLabel.leadingAnchor.constraint(equalTo: postHeaderView.leadingAnchor),

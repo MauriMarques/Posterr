@@ -57,7 +57,7 @@ class RepostTableViewCell: UITableViewCell, ViewCodable, ViewModelSettable {
       postHeaderView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20.0),
       postHeaderView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20.0),
       parentPostView.leadingAnchor.constraint(equalTo: postHeaderView.leadingAnchor),
-      parentPostView.topAnchor.constraint(equalTo: postHeaderView.bottomAnchor),
+      parentPostView.topAnchor.constraint(equalTo: postHeaderView.bottomAnchor, constant: 10.0),
       parentPostView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
       parentPostView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
     ])
