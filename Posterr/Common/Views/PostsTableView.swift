@@ -10,6 +10,31 @@ import UIKit
 
 final class PostsTableView: UITableView {
 
+  enum State {
+    case loaded
+    case empty
+  }
+
+  var state: State = .empty {
+    didSet {
+      switch state {
+      case .empty:
+        backgroundView = emptyStateLabel
+      case .loaded:
+        backgroundView = nil
+      }
+    }
+  }
+
+  private let emptyStateLabel: UILabel = {
+    let label = UILabel()
+    label.text = "Nothing to show for now. \n\n\n Let's create some posts!"
+    label.font = .boldSystemFont(ofSize: 24.0)
+    label.textAlignment = .center
+    label.numberOfLines = 0
+    return label
+  }()
+
   init() {
     super.init(frame: .zero, style: .plain)
     estimatedRowHeight = 200.0

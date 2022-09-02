@@ -10,11 +10,30 @@ import UIKit
 
 protocol PostsTableViewDataSourcing: UITableViewDataSource {
   var posts: [Post]? { get set }
+  var postsTableView: PostsTableView? { get set }
 }
 
 final class PostsTableViewDataSource: NSObject, PostsTableViewDataSourcing {
 
-  var posts: [Post]?
+  var posts: [Post]? {
+    didSet {
+      guard let posts = posts else {
+        return
+      }
+      if posts.isEmpty {
+        postsTableView?.state = .empty
+      } else {
+        postsTableView?.state = .loaded
+        postsTableView?.reloadData()
+        postsTableView?.scrollToRow(at: IndexPath(row: 0,
+                                                 section: 0),
+                                   at: .top,
+                                   animated: false)
+      }
+    }
+  }
+
+  var postsTableView: PostsTableView?
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     posts?.count ?? 0

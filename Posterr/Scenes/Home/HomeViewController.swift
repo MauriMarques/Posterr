@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
   init(postsTableViewDataSource: PostsTableViewDataSourcing = PostsTableViewDataSource()) {
     self.postsTableViewDataSource = postsTableViewDataSource
     super.init(nibName: nil, bundle: nil)
+    self.postsTableViewDataSource.postsTableView = postsTableView
   }
 
   required init?(coder: NSCoder) {
@@ -92,11 +93,6 @@ extension HomeViewController: HomePresentable {
 
   func loadPosts(_ posts: [Post]) {
     self.postsTableViewDataSource.posts = posts
-    postsTableView.reloadData()
-    postsTableView.scrollToRow(at: IndexPath(row: 0,
-                                             section: 0),
-                               at: .top,
-                               animated: false)
   }
 
   func showErrorScreen() {
