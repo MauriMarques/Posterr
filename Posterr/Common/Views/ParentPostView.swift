@@ -8,9 +8,35 @@
 import Foundation
 import UIKit
 
-protocol ParentPostViewViewModel {
-  var parentPostHeaderViewModel: PostHeaderViewViewModel { get }
+protocol ParentPostViewModel {
+  var parentPostHeaderViewModel: PostHeaderViewModel { get }
   var parentContentText: String { get }
+}
+
+struct DefaultParentPostViewModel: ParentPostViewModel {
+  var parentPostHeaderViewModel: PostHeaderViewModel {
+    switch post.type {
+    case .repost:
+      return post.parentPostHeaderViewModel
+    case .normal, .quote:
+      return post
+    }
+  }
+
+  var parentContentText: String {
+    switch post.type {
+    case .repost:
+      return post.parentPost?.content ?? ""
+    case .normal, .quote:
+      return post.content ?? ""
+    }
+  }
+
+  private let post: Post
+
+  init(post: Post) {
+    self.post = post
+  }
 }
 
 class ParentPostView: UIView {
@@ -39,7 +65,7 @@ class ParentPostView: UIView {
 }
 
 extension ParentPostView: ViewModelSettable {
-  func setViewModel(_ viewModel: ParentPostViewViewModel) {
+  func setViewModel(_ viewModel: ParentPostViewModel) {
     postHeaderView.setViewModel(viewModel.parentPostHeaderViewModel)
     contentLabel.text = viewModel.parentContentText
   }

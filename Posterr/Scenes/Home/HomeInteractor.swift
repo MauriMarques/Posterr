@@ -10,6 +10,7 @@ import Foundation
 protocol HomeInteractable {
   var router: HomeRouting? { get set }
   var presenter: HomePresentable { get }
+  func reloadHome()
 }
 
 class HomeInteractor: HomeInteractable {
@@ -28,6 +29,9 @@ class HomeInteractor: HomeInteractable {
     self.sessionService = sessionService
     self.postService = postService
     self.presenter.listener = self
+  }
+  func reloadHome() {
+    didLoad()
   }
 }
 
@@ -48,6 +52,14 @@ extension HomeInteractor: HomePresentableListener {
   }
 
   func didClickOnCreatePost() {
+    router?.routeToCreatePost(.normal)
+  }
 
+  func didClickOnRepostPost(_ post: Post) {
+    router?.routeToCreatePost(.repost(post))
+  }
+
+  func didClickOnQuotePost(_ post: Post) {
+    router?.routeToCreatePost(.quote(post))
   }
 }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol QuoteTableViewCellViewModel: PostTableCellViewModel {
-  var parentPostViewModel: ParentPostViewViewModel { get }
+  var parentPostViewModel: ParentPostViewModel { get }
 }
 class QuoteTableViewCell: PostTableViewCell {
   typealias ViewModel = QuoteTableViewCellViewModel

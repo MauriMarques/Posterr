@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 protocol RepostTableViewCellViewModel {
-  var postHeaderViewModel: PostHeaderViewViewModel { get }
+  var postHeaderViewModel: PostHeaderViewModel { get }
   var contentText: String { get }
-  var parentPostViewModel: ParentPostViewViewModel { get }
+  var parentPostViewModel: ParentPostViewModel { get }
 }
 
 class RepostTableViewCell: UITableViewCell, ViewCodable, ViewModelSettable {

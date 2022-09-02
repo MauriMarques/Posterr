@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		81E8D9E76A59B1AA584D4320 /* Pods_PosterrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A63EACDDE24D7C0A52E840F /* Pods_PosterrUITests.framework */; };
 		95DD4ED1C0A1A5DECDDFCC2C /* Pods_Posterr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EA4656EBBB2F0D8FCF8055 /* Pods_Posterr.framework */; };
+		BD05192C28C19A6D0051DB34 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05192B28C19A6D0051DB34 /* CreatePostView.swift */; };
+		BD05192E28C228A00051DB34 /* CreateRepostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05192D28C228A00051DB34 /* CreateRepostView.swift */; };
 		BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07657D28BBD4FE00725121 /* AppDelegate.swift */; };
 		BD07658728BBD50000725121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD07658628BBD50000725121 /* Assets.xcassets */; };
 		BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD07658828BBD50000725121 /* LaunchScreen.storyboard */; };
@@ -36,6 +38,10 @@
 		BD38585428C13DED00CF9CB3 /* ViewModelSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585328C13DED00CF9CB3 /* ViewModelSettable.swift */; };
 		BD38585628C13E5900CF9CB3 /* PostsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585528C13E5900CF9CB3 /* PostsTableView.swift */; };
 		BD38585A28C14BBA00CF9CB3 /* PostsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585928C14BBA00CF9CB3 /* PostsTableViewDataSource.swift */; };
+		BD38585F28C15D5200CF9CB3 /* CreatePostBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38585E28C15D5200CF9CB3 /* CreatePostBuilder.swift */; };
+		BD38586128C15D5B00CF9CB3 /* CreatePostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38586028C15D5B00CF9CB3 /* CreatePostInteractor.swift */; };
+		BD38586328C15D6600CF9CB3 /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38586228C15D6600CF9CB3 /* CreatePostRouter.swift */; };
+		BD38586528C15D7000CF9CB3 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38586428C15D7000CF9CB3 /* CreatePostViewController.swift */; };
 		BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FAC28BC1CAF004192D4 /* posterr.db */; };
 		BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */; };
 		BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FB328BCEECB004192D4 /* UserService.swift */; };
@@ -75,6 +81,8 @@
 		4A63EACDDE24D7C0A52E840F /* Pods_PosterrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PosterrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F16A96968F59B1BD6D3A577 /* Pods_PosterrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PosterrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9D97B5C5DE3BBADED90EF6 /* Pods-Posterr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posterr.release.xcconfig"; path = "Target Support Files/Pods-Posterr/Pods-Posterr.release.xcconfig"; sourceTree = "<group>"; };
+		BD05192B28C19A6D0051DB34 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		BD05192D28C228A00051DB34 /* CreateRepostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRepostView.swift; sourceTree = "<group>"; };
 		BD07657A28BBD4FE00725121 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD07657D28BBD4FE00725121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD07658628BBD50000725121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +113,10 @@
 		BD38585328C13DED00CF9CB3 /* ViewModelSettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSettable.swift; sourceTree = "<group>"; };
 		BD38585528C13E5900CF9CB3 /* PostsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableView.swift; sourceTree = "<group>"; };
 		BD38585928C14BBA00CF9CB3 /* PostsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewDataSource.swift; sourceTree = "<group>"; };
+		BD38585E28C15D5200CF9CB3 /* CreatePostBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostBuilder.swift; sourceTree = "<group>"; };
+		BD38586028C15D5B00CF9CB3 /* CreatePostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractor.swift; sourceTree = "<group>"; };
+		BD38586228C15D6600CF9CB3 /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
+		BD38586428C15D7000CF9CB3 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		BDF96FA628BBF384004192D4 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
 		BDF96FAC28BC1CAF004192D4 /* posterr.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = posterr.db; sourceTree = "<group>"; };
 		BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -240,6 +252,7 @@
 		BD237EF628BF73CD005307C5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BD38585D28C15D4100CF9CB3 /* CreatePost */,
 				BD237EF728BF73E7005307C5 /* Home */,
 			);
 			path = Scenes;
@@ -279,11 +292,13 @@
 		BD2C16F328BF9B8F00E0EF02 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD38584E28C0694200CF9CB3 /* Cells */,
+				BD05192B28C19A6D0051DB34 /* CreatePostView.swift */,
+				BD05192D28C228A00051DB34 /* CreateRepostView.swift */,
 				BD38583F28C0158A00CF9CB3 /* ParentPostView.swift */,
 				BD38584C28C067B700CF9CB3 /* PostHeaderView.swift */,
 				BD38585528C13E5900CF9CB3 /* PostsTableView.swift */,
 				BD2C16F528BF9BA600E0EF02 /* ProfileImageView.swift */,
-				BD38584E28C0694200CF9CB3 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,6 +338,17 @@
 				BD38585928C14BBA00CF9CB3 /* PostsTableViewDataSource.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BD38585D28C15D4100CF9CB3 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				BD38585E28C15D5200CF9CB3 /* CreatePostBuilder.swift */,
+				BD38586028C15D5B00CF9CB3 /* CreatePostInteractor.swift */,
+				BD38586228C15D6600CF9CB3 /* CreatePostRouter.swift */,
+				BD38586428C15D7000CF9CB3 /* CreatePostViewController.swift */,
+			);
+			path = CreatePost;
 			sourceTree = "<group>";
 		};
 		BDF96FA928BC0D4F004192D4 /* Database */ = {
@@ -695,20 +721,26 @@
 				BDF96FBA28BCEF66004192D4 /* SessionService.swift in Sources */,
 				BD38585628C13E5900CF9CB3 /* PostsTableView.swift in Sources */,
 				BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */,
+				BD38586528C15D7000CF9CB3 /* CreatePostViewController.swift in Sources */,
 				BD38584B28C0672500CF9CB3 /* CellIdentifiable.swift in Sources */,
 				BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */,
 				BD237EF928BF7414005307C5 /* HomeRouter.swift in Sources */,
+				BD38586128C15D5B00CF9CB3 /* CreatePostInteractor.swift in Sources */,
 				BD38585228C0DDF900CF9CB3 /* Post+ViewModels.swift in Sources */,
+				BD38586328C15D6600CF9CB3 /* CreatePostRouter.swift in Sources */,
+				BD05192C28C19A6D0051DB34 /* CreatePostView.swift in Sources */,
 				BDF96FC928BD715E004192D4 /* PostSQLService.swift in Sources */,
 				BD2C16F928BFA96000E0EF02 /* String+Image.swift in Sources */,
 				BD2C16F128BF8F1400E0EF02 /* ProfileBarView.swift in Sources */,
 				BDF96FC528BD6DB1004192D4 /* PostService.swift in Sources */,
 				BDF96FB728BCEEEF004192D4 /* User.swift in Sources */,
 				BD38583E28C0154B00CF9CB3 /* PostTableViewCell.swift in Sources */,
+				BD38585F28C15D5200CF9CB3 /* CreatePostBuilder.swift in Sources */,
 				BDF96FC228BCF9FC004192D4 /* UserLogging.swift in Sources */,
 				BD38584428C02E6400CF9CB3 /* RepostTableViewCell.swift in Sources */,
 				BD237EFF28BF7446005307C5 /* HomeViewController.swift in Sources */,
 				BD38585A28C14BBA00CF9CB3 /* PostsTableViewDataSource.swift in Sources */,
+				BD05192E28C228A00051DB34 /* CreateRepostView.swift in Sources */,
 				BD38584928C0654500CF9CB3 /* ViewCodable.swift in Sources */,
 				BD38584D28C067B700CF9CB3 /* PostHeaderView.swift in Sources */,
 				BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */,

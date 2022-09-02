@@ -19,6 +19,8 @@ protocol HomePresentableListener: AnyObject {
   func didLoad()
   func didClickOnProfileSection()
   func didClickOnCreatePost()
+  func didClickOnRepostPost(_ post: Post)
+  func didClickOnQuotePost(_ post: Post)
 }
 
 class HomeViewController: UIViewController {
@@ -31,11 +33,7 @@ class HomeViewController: UIViewController {
     return tableView
   }()
 
-  var postsTableViewDataSource: PostsTableViewDataSourcing {
-    didSet {
-      postsTableView.reloadData()
-    }
-  }
+  var postsTableViewDataSource: PostsTableViewDataSourcing
 
   init(postsTableViewDataSource: PostsTableViewDataSourcing = PostsTableViewDataSource()) {
     self.postsTableViewDataSource = postsTableViewDataSource
@@ -62,11 +60,22 @@ class HomeViewController: UIViewController {
     appearance.configureWithOpaqueBackground()
     navigationController?.navigationBar.standardAppearance = appearance
     navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+
+    let createPostBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
+                                                  target: self, action: #selector(didClickOnCreatePost))
+    createPostBarButtonItem.tintColor = .black
+    navigationItem.setRightBarButton(createPostBarButtonItem,
+                                     animated: false)
   }
 
   @objc
   private func didClickOnProfileButton() {
     listener?.didClickOnProfileSection()
+  }
+
+  @objc
+  private func didClickOnCreatePost() {
+    listener?.didClickOnCreatePost()
   }
 }
 
@@ -77,11 +86,17 @@ extension HomeViewController: HomePresentable {
     profileBarView.userName = user.name
     profileBarView.delegate = self
     let customBarButtonItem = UIBarButtonItem(customView: profileBarView)
-    navigationItem.setLeftBarButton(customBarButtonItem, animated: false)
+    navigationItem.setLeftBarButton(customBarButtonItem,
+                                    animated: false)
   }
 
   func loadPosts(_ posts: [Post]) {
     self.postsTableViewDataSource.posts = posts
+    postsTableView.reloadData()
+    postsTableView.scrollToRow(at: IndexPath(row: 0,
+                                             section: 0),
+                               at: .top,
+                               animated: false)
   }
 
   func showErrorScreen() {
@@ -99,4 +114,37 @@ enum PostTableError: Error {
   case noPostCellFound
 }
 
-extension HomeViewController: UITableViewDelegate {}
+extension HomeViewController: UITableViewDelegate {
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+
+    guard let post = postsTableViewDataSource.posts?[indexPath.row] else {
+      return
+    }
+
+    let alertTitle = "\(post.creator.name) - \(post.creationDateString)"
+
+    let alert = UIAlertController(title: alertTitle,
+                                  message: nil,
+                                  preferredStyle: .actionSheet)
+
+    alert.addAction(UIAlertAction(title: "Repost",
+                                  style: .default ,
+                                  handler: { [weak self] _ in
+      self?.listener?.didClickOnRepostPost(post)
+    }))
+
+    alert.addAction(UIAlertAction(title: "Quote",
+                                  style: .default ,
+                                  handler: { [weak self] _ in
+      self?.listener?.didClickOnQuotePost(post)
+    }))
+
+    alert.addAction(UIAlertAction(title: "Cancel",
+                                  style: .cancel,
+                                  handler: nil))
+
+    present(alert, animated: true, completion: nil)
+  }
+}

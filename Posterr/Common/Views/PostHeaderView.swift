@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol PostHeaderViewViewModel {
+protocol PostHeaderViewModel {
   var creatorUserName: String { get }
   var creationDateString: String { get }
 }
@@ -41,7 +41,7 @@ class PostHeaderView: UIView {
 }
 
 extension PostHeaderView: ViewModelSettable {
-  func setViewModel(_ viewModel: PostHeaderViewViewModel) {
+  func setViewModel(_ viewModel: PostHeaderViewModel) {
     profileBarView.userName = viewModel.creatorUserName
     contentCreationLabel.text = viewModel.creationDateString
   }
@@ -61,5 +61,5 @@ extension PostHeaderView: ViewCodable {
       contentCreationLabel.leadingAnchor.constraint(equalTo: profileBarView.trailingAnchor, constant: 10.0),
       contentCreationLabel.centerYAnchor.constraint(equalTo: profileBarView.centerYAnchor)
     ])
-  }  
+  }
 }

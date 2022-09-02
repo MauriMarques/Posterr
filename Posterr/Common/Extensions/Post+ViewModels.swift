@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension Post: PostTableCellViewModel {
-  var postHeaderViewModel: PostHeaderViewViewModel {
+  var postHeaderViewModel: PostHeaderViewModel {
     self
   }
 
@@ -19,12 +19,12 @@ extension Post: PostTableCellViewModel {
 }
 
 extension Post: QuoteTableViewCellViewModel & RepostTableViewCellViewModel {
-  var parentPostViewModel: ParentPostViewViewModel {
+  var parentPostViewModel: ParentPostViewModel {
     self
   }
 }
 
-extension Post: PostHeaderViewViewModel {
+extension Post: PostHeaderViewModel {
   var creatorUserName: String {
     self.creator.name
   }
@@ -37,8 +37,8 @@ extension Post: PostHeaderViewViewModel {
   }
 }
 
-extension Post: ParentPostViewViewModel {
-  var parentPostHeaderViewModel: PostHeaderViewViewModel {
+extension Post: ParentPostViewModel {
+  var parentPostHeaderViewModel: PostHeaderViewModel {
     guard let parentPost = parentPost else {
       return self
     }

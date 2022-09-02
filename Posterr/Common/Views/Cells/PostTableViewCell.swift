@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol PostTableCellViewModel {
-  var postHeaderViewModel: PostHeaderViewViewModel { get }
+  var postHeaderViewModel: PostHeaderViewModel { get }
   var contentText: String { get }
 }
 

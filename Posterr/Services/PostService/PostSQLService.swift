@@ -110,6 +110,7 @@ struct PostSQLService: PostService {
     do {
       let postJoinQuery = postTable.join(userTable,
                                          on: userTable[UserTableFields.idField] == postTable[PostTableFields.creatorIdField])
+        .order(postTable[PostTableFields.creationTimestampField].desc)
       return (try database.prepare(postJoinQuery)).compactMap { postRegister in
         let creator = User(id: postRegister[userTable[UserTableFields.idField]],
                            name: postRegister[UserTableFields.nameField],
