@@ -39,7 +39,7 @@ struct DefaultParentPostViewModel: ParentPostViewModel {
   }
 }
 
-class ParentPostView: UIView {
+final class ParentPostView: UIView {
 
   private let leftBorderView: UIView = {
     let view = UIView()

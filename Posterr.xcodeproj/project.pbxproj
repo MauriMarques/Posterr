@@ -198,8 +198,26 @@
 				BD05193928C398700051DB34 /* ProfileInteractor.swift */,
 				BD05193B28C398780051DB34 /* ProfileRouter.swift */,
 				BD05193D28C398840051DB34 /* ProfileViewController.swift */,
+				BD05194628C3BA0D0051DB34 /* Views */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		BD05194528C3B9FB0051DB34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD05192B28C19A6D0051DB34 /* CreatePostView.swift */,
+				BD05192D28C228A00051DB34 /* CreateRepostView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD05194628C3BA0D0051DB34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD05193F28C3A2390051DB34 /* ProfileHeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BD07657128BBD4FE00725121 = {
@@ -321,12 +339,9 @@
 			isa = PBXGroup;
 			children = (
 				BD38584E28C0694200CF9CB3 /* Cells */,
-				BD05192B28C19A6D0051DB34 /* CreatePostView.swift */,
-				BD05192D28C228A00051DB34 /* CreateRepostView.swift */,
 				BD38583F28C0158A00CF9CB3 /* ParentPostView.swift */,
 				BD38584C28C067B700CF9CB3 /* PostHeaderView.swift */,
 				BD38585528C13E5900CF9CB3 /* PostsTableView.swift */,
-				BD05193F28C3A2390051DB34 /* ProfileHeaderView.swift */,
 				BD2C16F528BF9BA600E0EF02 /* ProfileImageView.swift */,
 			);
 			path = Views;
@@ -378,6 +393,7 @@
 				BD38586028C15D5B00CF9CB3 /* CreatePostInteractor.swift */,
 				BD38586228C15D6600CF9CB3 /* CreatePostRouter.swift */,
 				BD38586428C15D7000CF9CB3 /* CreatePostViewController.swift */,
+				BD05194528C3B9FB0051DB34 /* Views */,
 			);
 			path = CreatePost;
 			sourceTree = "<group>";

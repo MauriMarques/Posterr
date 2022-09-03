@@ -13,15 +13,15 @@ protocol PostHeaderViewModel {
   var creationDateString: String { get }
 }
 
-class PostHeaderView: UIView {
+final class PostHeaderView: UIView {
 
-  lazy var profileBarView: ProfileBarView = {
+  private lazy var profileBarView: ProfileBarView = {
     let profileBarView = ProfileBarView()
     profileBarView.translatesAutoresizingMaskIntoConstraints = false
     return profileBarView
   }()
 
-  lazy var contentCreationLabel: UILabel = {
+  private lazy var contentCreationLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.numberOfLines = 1

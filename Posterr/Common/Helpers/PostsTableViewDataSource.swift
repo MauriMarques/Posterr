@@ -26,20 +26,22 @@ final class PostsTableViewDataSource: NSObject, PostsTableViewDataSourcing {
         postsTableView?.state = .loaded
         postsTableView?.reloadData()
         postsTableView?.scrollToRow(at: IndexPath(row: 0,
-                                                 section: 0),
-                                   at: .top,
-                                   animated: false)
+                                                  section: 0),
+                                    at: .top,
+                                    animated: false)
       }
     }
   }
 
   var postsTableView: PostsTableView?
 
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView,
+                 numberOfRowsInSection section: Int) -> Int {
     posts?.count ?? 0
   }
 
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView,
+                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let post = posts?[indexPath.row] else {
       return UITableViewCell()
     }

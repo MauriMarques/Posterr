@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ProfileImageView: UIImageView {
+final class ProfileImageView: UIImageView {
 
   override func layoutSubviews() {
     super.layoutSubviews()
