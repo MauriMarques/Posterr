@@ -11,6 +11,7 @@ import UIKit
 protocol CreatePostPresentable {
   var listener: CreatePostPresentableListener? { get set }
   func loadUser(_ user: User)
+  func showPostsCreationLimitReachedAlert()
 }
 
 protocol CreatePostPresentableListener: AnyObject {
@@ -88,6 +89,17 @@ extension CreatePostViewController: CreatePostPresentable {
     profileBarView.userName = user.name
     let customBarButtonItem = UIBarButtonItem(customView: profileBarView)
     navigationItem.setLeftBarButton(customBarButtonItem, animated: false)
+  }
+
+  func showPostsCreationLimitReachedAlert() {
+    let alert = UIAlertController(title: "\u{2639} \n Too many posts for today",
+                                  message: "Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow.",
+                                  preferredStyle: .alert)
+
+    alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { [weak self] _ in
+      self?.listener?.didCancel()
+    }))
+    self.present(alert, animated: true, completion: nil)
   }
 }
 

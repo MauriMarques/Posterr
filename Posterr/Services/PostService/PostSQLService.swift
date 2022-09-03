@@ -11,7 +11,7 @@ import SQLite
 struct PostTableFields {
   static let idField = Expression<Int64>("id")
   static let creatorIdField = Expression<Int64>("creator_id")
-  static let creationTimestampField = Expression<Int64>("creation_timestamp")
+  static let creationTimestampField = Expression<TimeInterval>("creation_timestamp")
   static let contentField = Expression<String?>("content")
   static let parentPostIdField = Expression<Int64?>("parent_post_id")
 }
@@ -37,8 +37,12 @@ struct PostSQLService: PostService {
     searchPosts(by: Table("Post"))
   }
 
-  func postsByCreator(_ creator: User) -> [Post] {
-    searchPosts(by: Table("Post").filter(PostTableFields.creatorIdField == creator.id))
+  func postsByCreator(_ creator: User, onDate date: Date?) -> [Post] {
+    if let date = date {
+      return searchPosts(by: Table("Post").filter(PostTableFields.creatorIdField == creator.id && PostTableFields.creationTimestampField >= date.timeIntervalSince1970))
+    } else {
+      return searchPosts(by: Table("Post").filter(PostTableFields.creatorIdField == creator.id))
+    }
   }
 
   func createPost(content: String, creator: User) -> Post? {
@@ -70,7 +74,7 @@ struct PostSQLService: PostService {
     let postTable = Table("Post")
 
     do {
-      let creationTimestamp = Int64(Date().timeIntervalSince1970)
+      let creationTimestamp = Date().timeIntervalSince1970
       let insert: Insert
       if let parentPost = parentPost {
         if let content = content {

@@ -11,6 +11,8 @@
 		95DD4ED1C0A1A5DECDDFCC2C /* Pods_Posterr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11EA4656EBBB2F0D8FCF8055 /* Pods_Posterr.framework */; };
 		BD05192C28C19A6D0051DB34 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05192B28C19A6D0051DB34 /* CreatePostView.swift */; };
 		BD05192E28C228A00051DB34 /* CreateRepostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05192D28C228A00051DB34 /* CreateRepostView.swift */; };
+		BD05193128C295450051DB34 /* PostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05193028C295450051DB34 /* PostType.swift */; };
+		BD05193528C30F2E0051DB34 /* Date+StripTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05193428C30F2E0051DB34 /* Date+StripTime.swift */; };
 		BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07657D28BBD4FE00725121 /* AppDelegate.swift */; };
 		BD07658728BBD50000725121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD07658628BBD50000725121 /* Assets.xcassets */; };
 		BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD07658828BBD50000725121 /* LaunchScreen.storyboard */; };
@@ -83,6 +85,8 @@
 		AF9D97B5C5DE3BBADED90EF6 /* Pods-Posterr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posterr.release.xcconfig"; path = "Target Support Files/Pods-Posterr/Pods-Posterr.release.xcconfig"; sourceTree = "<group>"; };
 		BD05192B28C19A6D0051DB34 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		BD05192D28C228A00051DB34 /* CreateRepostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRepostView.swift; sourceTree = "<group>"; };
+		BD05193028C295450051DB34 /* PostType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostType.swift; sourceTree = "<group>"; };
+		BD05193428C30F2E0051DB34 /* Date+StripTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StripTime.swift"; sourceTree = "<group>"; };
 		BD07657A28BBD4FE00725121 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD07657D28BBD4FE00725121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD07658628BBD50000725121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 			children = (
 				BD38585128C0DDF900CF9CB3 /* Post+ViewModels.swift */,
 				BD2C16F828BFA96000E0EF02 /* String+Image.swift */,
+				BD05193428C30F2E0051DB34 /* Date+StripTime.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 			children = (
 				BDF96FB628BCEEEF004192D4 /* User.swift */,
 				BDF96FC628BD6DD0004192D4 /* Post.swift */,
+				BD05193028C295450051DB34 /* PostType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -719,6 +725,7 @@
 				BD2C16F628BF9BA600E0EF02 /* ProfileImageView.swift in Sources */,
 				BDF96FC728BD6DD0004192D4 /* Post.swift in Sources */,
 				BDF96FBA28BCEF66004192D4 /* SessionService.swift in Sources */,
+				BD05193528C30F2E0051DB34 /* Date+StripTime.swift in Sources */,
 				BD38585628C13E5900CF9CB3 /* PostsTableView.swift in Sources */,
 				BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */,
 				BD38586528C15D7000CF9CB3 /* CreatePostViewController.swift in Sources */,
@@ -735,6 +742,7 @@
 				BDF96FC528BD6DB1004192D4 /* PostService.swift in Sources */,
 				BDF96FB728BCEEEF004192D4 /* User.swift in Sources */,
 				BD38583E28C0154B00CF9CB3 /* PostTableViewCell.swift in Sources */,
+				BD05193128C295450051DB34 /* PostType.swift in Sources */,
 				BD38585F28C15D5200CF9CB3 /* CreatePostBuilder.swift in Sources */,
 				BDF96FC228BCF9FC004192D4 /* UserLogging.swift in Sources */,
 				BD38584428C02E6400CF9CB3 /* RepostTableViewCell.swift in Sources */,

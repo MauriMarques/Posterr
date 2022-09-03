@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum PostType {
-  case normal
-  case quote(Post)
-  case repost(Post)
-}
-
 protocol CreatePostBuildable {
   func build(postType: PostType, listener: CreatePostInteractbleListener?) -> CreatePostRouting
 }

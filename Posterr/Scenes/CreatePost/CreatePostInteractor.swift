@@ -39,6 +39,12 @@ class CreatePostInteractor: CreatePostInteractable {
     self.postType = postType
     self.presenter.listener = self
   }
+
+  private func canCreatePost(_ user: User) -> Bool {
+    let posts = postService.postsByCreator(user,
+                                           onDate: Date().stripTime())
+    return posts.count < 4
+  }
 }
 
 extension CreatePostInteractor: CreatePostPresentableListener {
@@ -49,6 +55,9 @@ extension CreatePostInteractor: CreatePostPresentableListener {
       return
     }
     presenter.loadUser(user)
+    if !canCreatePost(user) {
+      presenter.showPostsCreationLimitReachedAlert()
+    }
   }
 
   func didClickOnCreatePost(content: String?) {
@@ -56,35 +65,40 @@ extension CreatePostInteractor: CreatePostPresentableListener {
       listener?.didCloseCreatePost()
       return
     }
-    let post: Post?
-    switch postType {
-    case .normal:
-      post = postService.createPost(content: content ?? "",
-                                    creator: user)
-    case let .quote(parentPost):
-      if parentPost.type == .repost, let parentParentPost = parentPost.parentPost {
-        post = postService.quotePost(content: content ?? "",
-                                     parentPost: parentParentPost,
-                                     creator: user)
-      } else {
-        post = postService.quotePost(content: content ?? "",
-                                     parentPost: parentPost,
-                                     creator: user)
-      }
-    case let .repost(parentPost):
-      if parentPost.type == .repost, let parentParentPost = parentPost.parentPost {
-        post = postService.repostPost(parentPost: parentParentPost,
-                                      creator: user)
-      } else {
-        post = postService.repostPost(parentPost: parentPost,
-                                      creator: user)
-      }
-    }
 
-    guard let post = post else {
-      return
+    if !canCreatePost(user) {
+      presenter.showPostsCreationLimitReachedAlert()
+    } else {
+      let post: Post?
+      switch postType {
+      case .normal:
+        post = postService.createPost(content: content ?? "",
+                                      creator: user)
+      case let .quote(parentPost):
+        if parentPost.type == .repost, let parentParentPost = parentPost.parentPost {
+          post = postService.quotePost(content: content ?? "",
+                                       parentPost: parentParentPost,
+                                       creator: user)
+        } else {
+          post = postService.quotePost(content: content ?? "",
+                                       parentPost: parentPost,
+                                       creator: user)
+        }
+      case let .repost(parentPost):
+        if parentPost.type == .repost, let parentParentPost = parentPost.parentPost {
+          post = postService.repostPost(parentPost: parentParentPost,
+                                        creator: user)
+        } else {
+          post = postService.repostPost(parentPost: parentPost,
+                                        creator: user)
+        }
+      }
+
+      guard let post = post else {
+        return
+      }
+      listener?.didCreatePost(post)
     }
-    listener?.didCreatePost(post)
   }
 
   func didCancel() {

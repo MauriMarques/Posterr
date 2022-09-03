@@ -9,7 +9,7 @@ import Foundation
 
 protocol PostService {
   func allPosts() -> [Post]
-  func postsByCreator(_ creator: User) -> [Post]
+  func postsByCreator(_ creator: User, onDate date: Date?) -> [Post]
   func createPost(content: String, creator: User) -> Post?
   func repostPost(parentPost: Post, creator: User) -> Post?
   func quotePost(content: String, parentPost: Post, creator: User) -> Post?
