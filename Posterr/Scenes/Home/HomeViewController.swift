@@ -24,6 +24,16 @@ protocol HomePresentableListener: AnyObject {
 }
 
 final class HomeViewController: UIViewController {
+
+  struct AccessibilityIdentifier {
+    static let composeButton = "home_compose_button"
+    static let profileBarView = ProfileHeaderView.AccessibilityIdentifier.`self`
+    static let emptyLabel = PostsTableView.AccessibilityIdentifier.emptyLabel
+    static let postCell = PostTableViewCell.AccessibilityIdentifier.`self`
+    static let quoteCell = QuoteTableViewCell.AccessibilityIdentifier.`self`
+    static let repostCell = RepostTableViewCell.AccessibilityIdentifier.`self`
+  }
+
   weak var listener: HomePresentableListener?
 
   private lazy var postsTableView: PostsTableView = {

@@ -15,13 +15,17 @@ protocol PostHeaderViewModel {
 
 final class PostHeaderView: UIView {
 
+  struct AccessibilityIdentifier {
+    static let `self` = "post_header_view"
+  }
+
   private lazy var profileBarView: ProfileBarView = {
     let profileBarView = ProfileBarView()
     profileBarView.translatesAutoresizingMaskIntoConstraints = false
     return profileBarView
   }()
 
-  private lazy var contentCreationLabel: UILabel = {
+  private lazy var contentCreationDateLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.numberOfLines = 1
@@ -43,14 +47,14 @@ final class PostHeaderView: UIView {
 extension PostHeaderView: ViewModelSettable {
   func setViewModel(_ viewModel: PostHeaderViewModel) {
     profileBarView.userName = viewModel.creatorUserName
-    contentCreationLabel.text = viewModel.creationDateString
+    contentCreationDateLabel.text = viewModel.creationDateString
   }
 }
 
 extension PostHeaderView: ViewCodable {
   func buildViewHierarchy() {
     addSubview(profileBarView)
-    addSubview(contentCreationLabel)
+    addSubview(contentCreationDateLabel)
   }
 
   func setupConstraints() {
@@ -58,8 +62,12 @@ extension PostHeaderView: ViewCodable {
       profileBarView.leadingAnchor.constraint(equalTo: leadingAnchor),
       profileBarView.topAnchor.constraint(equalTo: topAnchor),
       profileBarView.bottomAnchor.constraint(equalTo: bottomAnchor),
-      contentCreationLabel.leadingAnchor.constraint(equalTo: profileBarView.trailingAnchor, constant: 10.0),
-      contentCreationLabel.centerYAnchor.constraint(equalTo: profileBarView.centerYAnchor)
+      contentCreationDateLabel.leadingAnchor.constraint(equalTo: profileBarView.trailingAnchor, constant: 10.0),
+      contentCreationDateLabel.centerYAnchor.constraint(equalTo: profileBarView.centerYAnchor)
     ])
+  }
+
+  func configureView() {
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

@@ -14,6 +14,11 @@ enum PostTableError: Error {
 
 final class PostsTableView: UITableView {
 
+  struct AccessibilityIdentifier {
+    static let `self` = "post_table_view"
+    static let emptyLabel = "empty_label"
+  }
+
   enum State {
     case loaded
     case empty
@@ -36,6 +41,7 @@ final class PostsTableView: UITableView {
     label.font = .boldSystemFont(ofSize: 24.0)
     label.textAlignment = .center
     label.numberOfLines = 0
+    label.accessibilityIdentifier = AccessibilityIdentifier.emptyLabel
     return label
   }()
 
@@ -49,6 +55,7 @@ final class PostsTableView: UITableView {
              forCellReuseIdentifier: QuoteTableViewCell.identifier)
     register(RepostTableViewCell.self,
              forCellReuseIdentifier: RepostTableViewCell.identifier)
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 
   required init?(coder: NSCoder) {

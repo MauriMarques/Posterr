@@ -18,6 +18,10 @@ protocol ProfileHeaderViewModel {
 
 final class ProfileHeaderView: UIView {
 
+  struct AccessibilityIdentifier {
+    static let `self` = "profile_header_view"
+  }
+
   private lazy var profileImageView: ProfileImageView = {
     let profileImageView = ProfileImageView()
     profileImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -101,5 +105,9 @@ extension ProfileHeaderView: ViewCodable {
       accountCreationDateLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30.0),
       accountCreationDateLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
     ])
+  }
+
+  func configureView() {
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

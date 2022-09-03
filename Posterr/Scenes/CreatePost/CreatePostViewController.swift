@@ -21,6 +21,14 @@ protocol CreatePostPresentableListener: AnyObject {
 }
 
 final class CreatePostViewController: UIViewController {
+
+  struct AccessibilityIdentifier {
+    static let cancelButton = "create_post_cancel_button"
+    static let createButton = "create_post_create_button"
+    static let contentTextField = CreatePostView.AccessibilityIdentifier.contentTextField
+    static let parentPostView = ParentPostView.AccessibilityIdentifier.`self`
+  }
+
   weak var listener: CreatePostPresentableListener?
 
   private lazy var createPostView: UIView = {

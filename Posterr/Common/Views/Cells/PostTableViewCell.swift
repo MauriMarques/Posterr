@@ -14,6 +14,11 @@ protocol PostTableCellViewModel {
 }
 
 class PostTableViewCell: UITableViewCell, ViewCodable, ViewModelSettable {
+
+  struct AccessibilityIdentifier {
+    static let `self` = "post_cell"
+  }
+
   typealias ViewModel = PostTableCellViewModel
 
   lazy var postHeaderView: PostHeaderView = {
@@ -61,5 +66,9 @@ class PostTableViewCell: UITableViewCell, ViewCodable, ViewModelSettable {
       contentLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
       contentLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
     ])
+  }
+
+  func configureView() {
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

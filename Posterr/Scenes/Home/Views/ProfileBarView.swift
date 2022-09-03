@@ -14,6 +14,10 @@ protocol ProfileBarViewDelegate: AnyObject {
 
 class ProfileBarView: UIView {
 
+  struct AccessibilityIdentifier {
+    static let `self` = "profile_bar_view"
+  }
+
   var userName: String? {
     didSet {
       guard let userName = userName else {
@@ -78,5 +82,6 @@ extension ProfileBarView: ViewCodable {
   func configureView() {
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView))
     addGestureRecognizer(tapGesture)
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

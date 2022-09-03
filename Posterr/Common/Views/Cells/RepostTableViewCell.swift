@@ -15,6 +15,11 @@ protocol RepostTableViewCellViewModel {
 }
 
 class RepostTableViewCell: UITableViewCell, ViewCodable, ViewModelSettable {
+
+  struct AccessibilityIdentifier {
+    static let `self` = "repost_cell"
+  }
+
   typealias ViewModel = RepostTableViewCellViewModel
 
   lazy var postHeaderView: PostHeaderView = {
@@ -61,5 +66,9 @@ class RepostTableViewCell: UITableViewCell, ViewCodable, ViewModelSettable {
       parentPostView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
       parentPostView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
     ])
+  }
+
+  func configureView() {
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

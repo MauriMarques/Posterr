@@ -41,6 +41,10 @@ struct DefaultParentPostViewModel: ParentPostViewModel {
 
 final class ParentPostView: UIView {
 
+  struct AccessibilityIdentifier {
+    static let `self` = "parent_post_view"
+  }
+
   private let leftBorderView: UIView = {
     let view = UIView()
     view.backgroundColor = .black
@@ -99,5 +103,9 @@ extension ParentPostView: ViewCodable {
       contentLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0),
       contentLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10.0)
     ])
+  }
+
+  func configureView() {
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

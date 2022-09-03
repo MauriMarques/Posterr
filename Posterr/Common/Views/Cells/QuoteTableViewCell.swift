@@ -12,6 +12,11 @@ protocol QuoteTableViewCellViewModel: PostTableCellViewModel {
   var parentPostViewModel: ParentPostViewModel { get }
 }
 class QuoteTableViewCell: PostTableViewCell {
+
+  struct AccessibilityIdentifier {
+    static let `self` = "quote_cell"
+  }
+
   typealias ViewModel = QuoteTableViewCellViewModel
 
   lazy var parentPostView: ParentPostView = {
@@ -53,5 +58,9 @@ class QuoteTableViewCell: PostTableViewCell {
       parentPostView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20.0),
       parentPostView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
     ])
+  }
+
+  override func configureView() {
+    accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

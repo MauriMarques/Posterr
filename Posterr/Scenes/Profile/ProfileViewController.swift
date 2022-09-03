@@ -22,6 +22,15 @@ protocol ProfilePresentableListener: AnyObject {
 
 final class ProfileViewController: UIViewController {
 
+  struct AccessibilityIdentifier {
+    static let composeButton = "home_compose_button"
+    static let profileHeaderView = ProfileHeaderView.AccessibilityIdentifier.`self`
+    static let emptyLabel = PostsTableView.AccessibilityIdentifier.emptyLabel
+    static let postCell = PostTableViewCell.AccessibilityIdentifier.`self`
+    static let quoteCell = QuoteTableViewCell.AccessibilityIdentifier.`self`
+    static let repostCell = RepostTableViewCell.AccessibilityIdentifier.`self`
+  }
+
   weak var listener: ProfilePresentableListener?
 
   private var user: User?

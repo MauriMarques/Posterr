@@ -14,12 +14,18 @@ protocol CreatePostViewDelegate: AnyObject {
 
 final class CreatePostView: UIView {
 
+  struct AccessibilityIdentifier {
+    static let contentTextField = "content_text_field"
+    static let createButton = "create_button"
+  }
+
   private lazy var contentTextField: UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
     textField.placeholder = "What's happening?"
     textField.contentVerticalAlignment = .top
     textField.delegate = self
+    textField.accessibilityIdentifier = AccessibilityIdentifier.contentTextField
     return textField
   }()
 
@@ -48,6 +54,7 @@ final class CreatePostView: UIView {
     button.addTarget(self,
                      action: #selector(didClickOnCreatePost),
                      for: .touchUpInside)
+    button.accessibilityIdentifier = AccessibilityIdentifier.createButton
     return button
   }()
 

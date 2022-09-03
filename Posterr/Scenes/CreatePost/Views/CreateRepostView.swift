@@ -14,6 +14,10 @@ protocol CreateRepostViewDelegate: AnyObject {
 
 final class CreateRepostView: UIView {
 
+  struct AccessibilityIdentifier {
+    static let createButton = "create_button"
+  }
+
   private lazy var parentPostView: ParentPostView = {
     let postView = ParentPostView()
     postView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,6 +33,7 @@ final class CreateRepostView: UIView {
     button.addTarget(self,
                      action: #selector(didClickOnCreateRepost),
                      for: .touchUpInside)
+    button.accessibilityIdentifier = AccessibilityIdentifier.createButton
     return button
   }()
 
