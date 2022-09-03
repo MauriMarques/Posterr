@@ -14,10 +14,12 @@ protocol ProfileBuildable {
 struct ProfileBuilder: ProfileBuildable {
 
   private let sessionService: SessionService
+  private let appConfig: PosterrAppConfig
   private let postService: PostService
 
-  init(sessionService: SessionService, postService: PostService) {
+  init(sessionService: SessionService, appConfig: PosterrAppConfig, postService: PostService) {
     self.sessionService = sessionService
+    self.appConfig = appConfig
     self.postService = postService
   }
 
@@ -28,6 +30,7 @@ struct ProfileBuilder: ProfileBuildable {
                                        postService: postService)
 
     let createPostBuilder = CreatePostBuilder(sessionService: sessionService,
+                                              appConfig: appConfig,
                                               postService: postService)
     interactor.listener = listener
     return ProfileRouter(interactor: interactor,

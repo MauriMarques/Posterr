@@ -18,11 +18,11 @@ struct PostTableFields {
 
 struct PostSQLService: PostService {
 
-  static let postMaxLength: UInt = 777
-
   private let database: Connection?
+  private let appConfig: PosterrAppConfig
 
-  init?(dbFilename: String = "posterr.db") {
+  init?(dbFilename: String = "posterr.db", appConfig: PosterrAppConfig) {
+    self.appConfig = appConfig
     do {
       guard let databasePath = DatabaseHelper(dbFilename: dbFilename).localDbFilename else {
         return nil
@@ -67,7 +67,7 @@ struct PostSQLService: PostService {
     }
 
     if let content = content,
-        content.count > PostSQLService.postMaxLength {
+        content.count > appConfig.postMaxLegnth {
       return nil
     }
 

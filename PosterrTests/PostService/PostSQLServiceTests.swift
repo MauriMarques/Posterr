@@ -11,9 +11,11 @@ import XCTest
 class PostSQLServiceTests: XCTestCase {
 
   var sut: PostSQLService?
+  var appConfig = AppConfigMock()
 
   override func setUp() {
-    sut = PostSQLService(dbFilename: "posterr_test.db")
+    sut = PostSQLService(dbFilename: "posterr_test.db",
+                         appConfig: appConfig)
   }
 
   override func tearDown() {
@@ -21,7 +23,8 @@ class PostSQLServiceTests: XCTestCase {
   }
 
   func testInitWithIncorrectDb() {
-    sut = PostSQLService(dbFilename: "incorrect.db")
+    sut = PostSQLService(dbFilename: "incorrect.db",
+                         appConfig: appConfig)
     XCTAssertNil(sut)
   }
 
@@ -39,7 +42,7 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 """,
                                       creator: creator)
-    XCTAssertNil(createdPost, "Posts with content bigger than \(PostSQLService.postMaxLength) characters should not be created")
+    XCTAssertNil(createdPost, "Posts with content bigger than \(appConfig.postMaxLegnth) characters should not be created")
   }
 
   func testRepostPost() {

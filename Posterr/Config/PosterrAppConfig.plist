@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>USERS</key>
+	<dict>
+		<key>ecramDEi</key>
+		<dict>
+			<key>ID</key>
+			<integer>1</integer>
+			<key>IS_LOGGED</key>
+			<true/>
+		</dict>
+		<key>WairLeXt</key>
+		<dict>
+			<key>ID</key>
+			<integer>2</integer>
+			<key>IS_LOGGED</key>
+			<false/>
+		</dict>
+		<key>StRioviT</key>
+		<dict>
+			<key>ID</key>
+			<integer>3</integer>
+			<key>IS_LOGGED</key>
+			<false/>
+		</dict>
+		<key>TicAtChL</key>
+		<dict>
+			<key>ID</key>
+			<integer>4</integer>
+			<key>IS_LOGGED</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>LIMIT_OF_POSTS_PER_DAY</key>
+	<integer>5</integer>
+	<key>POST_MAX_LENGTH</key>
+	<integer>777</integer>
+</dict>
+</plist>

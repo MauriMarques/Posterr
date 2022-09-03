@@ -19,6 +19,9 @@
 		BD05193E28C398840051DB34 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05193D28C398840051DB34 /* ProfileViewController.swift */; };
 		BD05194028C3A2390051DB34 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05193F28C3A2390051DB34 /* ProfileHeaderView.swift */; };
 		BD05194428C3B8840051DB34 /* Array+Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05194328C3B8840051DB34 /* Array+Posts.swift */; };
+		BD05194928C3C6950051DB34 /* PosterrAppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD05194828C3C6950051DB34 /* PosterrAppConfig.plist */; };
+		BD05194B28C3E1860051DB34 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05194A28C3E1860051DB34 /* AppConfig.swift */; };
+		BD05194E28C3EF9B0051DB34 /* AppConfigMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05194D28C3EF9B0051DB34 /* AppConfigMock.swift */; };
 		BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07657D28BBD4FE00725121 /* AppDelegate.swift */; };
 		BD07658728BBD50000725121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD07658628BBD50000725121 /* Assets.xcassets */; };
 		BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD07658828BBD50000725121 /* LaunchScreen.storyboard */; };
@@ -99,6 +102,9 @@
 		BD05193D28C398840051DB34 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BD05193F28C3A2390051DB34 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		BD05194328C3B8840051DB34 /* Array+Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Posts.swift"; sourceTree = "<group>"; };
+		BD05194828C3C6950051DB34 /* PosterrAppConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PosterrAppConfig.plist; sourceTree = "<group>"; };
+		BD05194A28C3E1860051DB34 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		BD05194D28C3EF9B0051DB34 /* AppConfigMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigMock.swift; sourceTree = "<group>"; };
 		BD07657A28BBD4FE00725121 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD07657D28BBD4FE00725121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD07658628BBD50000725121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,6 +226,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BD05194728C3C64B0051DB34 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				BD05194828C3C6950051DB34 /* PosterrAppConfig.plist */,
+				BD05194A28C3E1860051DB34 /* AppConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		BD05194C28C3EF910051DB34 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BD05194D28C3EF9B0051DB34 /* AppConfigMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		BD07657128BBD4FE00725121 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +272,7 @@
 				BD07657D28BBD4FE00725121 /* AppDelegate.swift */,
 				BD07658628BBD50000725121 /* Assets.xcassets */,
 				BD2C16F228BF9B6100E0EF02 /* Common */,
+				BD05194728C3C64B0051DB34 /* Config */,
 				BDF96FA928BC0D4F004192D4 /* Database */,
 				BD07658828BBD50000725121 /* LaunchScreen.storyboard */,
 				BDF96FB528BCEEE2004192D4 /* Models */,
@@ -261,6 +285,7 @@
 		BD07659328BBD50100725121 /* PosterrTests */ = {
 			isa = PBXGroup;
 			children = (
+				BD05194C28C3EF910051DB34 /* Mocks */,
 				BDF96FCE28BE379C004192D4 /* Database */,
 				BD237EF128BE3CDB005307C5 /* PostService */,
 				BD237EEE28BE3B79005307C5 /* SessionService */,
@@ -597,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */,
+				BD05194928C3C6950051DB34 /* PosterrAppConfig.plist in Resources */,
 				BD237EED28BE3A52005307C5 /* posterr_test.db in Resources */,
 				BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */,
 				BD07658728BBD50000725121 /* Assets.xcassets in Resources */,
@@ -775,6 +801,7 @@
 				BD05193A28C398700051DB34 /* ProfileInteractor.swift in Sources */,
 				BD38584B28C0672500CF9CB3 /* CellIdentifiable.swift in Sources */,
 				BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */,
+				BD05194B28C3E1860051DB34 /* AppConfig.swift in Sources */,
 				BD237EF928BF7414005307C5 /* HomeRouter.swift in Sources */,
 				BD38586128C15D5B00CF9CB3 /* CreatePostInteractor.swift in Sources */,
 				BD38585228C0DDF900CF9CB3 /* Post+ViewModels.swift in Sources */,
@@ -814,6 +841,7 @@
 			files = (
 				BD237EF328BE3CEF005307C5 /* PostSQLServiceTests.swift in Sources */,
 				BD237EF028BE3B8E005307C5 /* InMemorySessionServiceTests.swift in Sources */,
+				BD05194E28C3EF9B0051DB34 /* AppConfigMock.swift in Sources */,
 				BD237EF528BE3F4E005307C5 /* SQLDatabaseCleaner.swift in Sources */,
 				BDF96FCD28BE3735004192D4 /* UserSQLServiceTests.swift in Sources */,
 			);

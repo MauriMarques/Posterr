@@ -26,15 +26,18 @@ final class CreatePostInteractor: CreatePostInteractable {
   var presenter: CreatePostPresentable
 
   private let sessionService: SessionService
+  private let appConfig: PosterrAppConfig
   private let postService: PostService
   private let postType: PostType
 
   init(presenter: CreatePostPresentable,
        sessionService: SessionService,
+       appConfig: PosterrAppConfig,
        postService: PostService,
        postType: PostType) {
     self.presenter = presenter
     self.sessionService = sessionService
+    self.appConfig = appConfig
     self.postService = postService
     self.postType = postType
     self.presenter.listener = self
@@ -43,7 +46,7 @@ final class CreatePostInteractor: CreatePostInteractable {
   private func canCreatePost(_ user: User) -> Bool {
     let posts = postService.postsByCreator(user,
                                            onDate: Date().stripTime())
-    return posts.count < 4
+    return posts.count < appConfig.limitOfPostsPerDay
   }
 }
 

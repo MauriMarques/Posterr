@@ -26,11 +26,12 @@ final class CreatePostViewController: UIViewController {
   private lazy var createPostView: UIView = {
     switch postType {
     case .normal:
-      let createPostView = CreatePostView()
+      let createPostView = CreatePostView(maxCharactersAllowed: appConfig.postMaxLegnth)
       createPostView.delegate = self
       return createPostView
     case let .quote(parentPost):
-      let createQuoteView = CreatePostView(parentPostViewModel: DefaultParentPostViewModel(post: parentPost))
+      let createQuoteView = CreatePostView(maxCharactersAllowed: appConfig.postMaxLegnth,
+                                           parentPostViewModel: DefaultParentPostViewModel(post: parentPost))
       createQuoteView.delegate = self
       return createQuoteView
     case let .repost(parentPost):
@@ -41,9 +42,12 @@ final class CreatePostViewController: UIViewController {
   }()
 
   private let postType: PostType
+  private let appConfig: PosterrAppConfig
 
-  init(postType: PostType) {
+  init(postType: PostType,
+       appConfig: PosterrAppConfig) {
     self.postType = postType
+    self.appConfig = appConfig
     super.init(nibName: nil,
                bundle: nil)
   }

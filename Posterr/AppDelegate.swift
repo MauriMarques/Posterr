@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   private let sessionService: SessionService & UserLogging = InMemorySessionService()
-
+  private let appConfig = AppConfig(configFilename: "PosterrAppConfig")
   private var homeRouter: HomeRouting?
 
   func application(_ application: UIApplication,
@@ -27,20 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   private func createSession() {
     let userService: UserService? = UserSQLService()
-    guard let user = userService?.userById(1) else {
+    guard appConfig.loggedUserId > -1,
+          let user = userService?.userById(appConfig.loggedUserId) else {
       return
     }
     _ = sessionService.login(user)
   }
 
   private func launchHome() {
-    let postService = PostSQLService()
+    let postService = PostSQLService(appConfig: appConfig)
     guard let window = window,
           let postService = postService else {
             return
           }
-    let homeRouter = HomeBuilder().build(sessionService: sessionService,
-                                         postService: postService)
+    let homeRouter = HomeBuilder(appConfig: appConfig).build(sessionService: sessionService,
+                                                             postService: postService)
     self.homeRouter = homeRouter
     homeRouter.launch(from: window)
   }
