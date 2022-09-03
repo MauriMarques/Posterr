@@ -44,7 +44,8 @@ final class CreatePostViewController: UIViewController {
 
   init(postType: PostType) {
     self.postType = postType
-    super.init(nibName: nil, bundle: nil)
+    super.init(nibName: nil,
+               bundle: nil)
   }
 
   override func loadView() {
@@ -56,6 +57,7 @@ final class CreatePostViewController: UIViewController {
     view.backgroundColor = .white
     setUpNavigationBar()
     listener?.didLoad()
+    _ = (view as? CreatePostView)?.becomeFirstResponder()
   }
 
   private func setUpNavigationBar() {

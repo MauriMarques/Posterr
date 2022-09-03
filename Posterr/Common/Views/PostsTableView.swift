@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+enum PostTableError: Error {
+  case noPostCellFound
+}
+
 final class PostsTableView: UITableView {
 
   enum State {

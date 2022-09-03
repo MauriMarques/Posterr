@@ -74,6 +74,10 @@ final class CreatePostView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
+  override func becomeFirstResponder() -> Bool {
+    contentTextField.becomeFirstResponder()
+  }
+
   @objc
   private func didClickOnCreatePost() {
     guard contentText.count <= maxCharactersAllowed else {

@@ -18,7 +18,7 @@ protocol CreatePostInteractbleListener: AnyObject {
   func didCloseCreatePost()
 }
 
-class CreatePostInteractor: CreatePostInteractable {
+final class CreatePostInteractor: CreatePostInteractable {
 
   weak var router: CreatePostRouting?
   weak var listener: CreatePostInteractbleListener?

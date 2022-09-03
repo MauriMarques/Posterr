@@ -23,7 +23,7 @@ protocol HomePresentableListener: AnyObject {
   func didClickOnQuotePost(_ post: Post)
 }
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
   weak var listener: HomePresentableListener?
 
   private lazy var postsTableView: PostsTableView = {
@@ -37,8 +37,10 @@ class HomeViewController: UIViewController {
 
   init(postsTableViewDataSource: PostsTableViewDataSourcing = PostsTableViewDataSource()) {
     self.postsTableViewDataSource = postsTableViewDataSource
-    super.init(nibName: nil, bundle: nil)
-    self.postsTableViewDataSource.postsTableView = postsTableView
+    super.init(nibName: nil,
+               bundle: nil)
+    postsTableViewDataSource.postsTableView = postsTableView
+    title = "Home"
   }
 
   required init?(coder: NSCoder) {
@@ -61,10 +63,10 @@ class HomeViewController: UIViewController {
     appearance.configureWithOpaqueBackground()
     navigationController?.navigationBar.standardAppearance = appearance
     navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+    navigationController?.navigationBar.tintColor = .black
 
     let createPostBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
                                                   target: self, action: #selector(didClickOnCreatePost))
-    createPostBarButtonItem.tintColor = .black
     navigationItem.setRightBarButton(createPostBarButtonItem,
                                      animated: false)
   }
@@ -104,10 +106,6 @@ extension HomeViewController: ProfileBarViewDelegate {
   func didTapProfileBarView(_ profileBarView: ProfileBarView) {
     listener?.didClickOnProfileSection()
   }
-}
-
-enum PostTableError: Error {
-  case noPostCellFound
 }
 
 extension HomeViewController: UITableViewDelegate {

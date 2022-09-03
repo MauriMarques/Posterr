@@ -12,7 +12,7 @@ protocol CreatePostRouting: AnyObject {
   func start() -> UINavigationController
 }
 
-class CreatePostRouter: CreatePostRouting {
+final class CreatePostRouter: CreatePostRouting {
 
   private var interactor: CreatePostInteractable
   private let viewController: UIViewController

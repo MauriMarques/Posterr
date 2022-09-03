@@ -13,7 +13,7 @@ protocol HomeInteractable {
   func reloadHome()
 }
 
-class HomeInteractor: HomeInteractable {
+final class HomeInteractor: HomeInteractable {
 
   weak var router: HomeRouting?
 
@@ -30,6 +30,7 @@ class HomeInteractor: HomeInteractable {
     self.postService = postService
     self.presenter.listener = self
   }
+
   func reloadHome() {
     didLoad()
   }
@@ -48,7 +49,7 @@ extension HomeInteractor: HomePresentableListener {
   }
 
   func didClickOnProfileSection() {
-
+    router?.routeToProfile()
   }
 
   func didClickOnCreatePost() {

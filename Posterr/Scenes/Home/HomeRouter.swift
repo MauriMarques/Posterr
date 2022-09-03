@@ -14,7 +14,7 @@ protocol HomeRouting: AnyObject {
   func routeToProfile()
 }
 
-class HomeRouter: HomeRouting {
+final class HomeRouter: HomeRouting {
 
   private var interactor: HomeInteractable
   private let viewController: UIViewController
@@ -22,12 +22,17 @@ class HomeRouter: HomeRouting {
   private let createPostBuilder: CreatePostBuildable
   private var createPostRouter: CreatePostRouting?
 
+  private let profileBuilder: ProfileBuildable
+  private var profileRouter: ProfileRouting?
+
   init(interactor: HomeInteractable,
        viewController: UIViewController,
-       createPostBuilder: CreatePostBuildable) {
+       createPostBuilder: CreatePostBuildable,
+       profileBuilder: ProfileBuildable) {
     self.interactor = interactor
     self.viewController = viewController
     self.createPostBuilder = createPostBuilder
+    self.profileBuilder = profileBuilder
     self.interactor.router = self
   }
 
@@ -52,7 +57,15 @@ class HomeRouter: HomeRouting {
   }
 
   func routeToProfile() {
-
+    guard profileRouter == nil else {
+      return
+    }
+    profileRouter = profileBuilder.build(listener: self)
+    guard let profileViewController = profileRouter?.start() else {
+      return
+    }
+    viewController.navigationController?.pushViewController(profileViewController,
+                                                            animated: true)
   }
 }
 
@@ -73,5 +86,14 @@ extension HomeRouter: CreatePostInteractbleListener {
     viewController.presentedViewController?.dismiss(animated: true,
                                                     completion: nil)
     createPostRouter = nil
+  }
+}
+
+extension HomeRouter: ProfileInteractableListerner {
+  func didCloseProfile() {
+    guard profileRouter != nil else {
+      return
+    }
+    profileRouter = nil
   }
 }

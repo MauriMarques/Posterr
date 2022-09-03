@@ -21,9 +21,12 @@ struct HomeBuilder: HomeBuildable {
 
     let createPostBuilder = CreatePostBuilder(sessionService: sessionService,
                                               postService: postService)
+    let profileBuilder = ProfileBuilder(sessionService: sessionService,
+                                        postService: postService)
 
     return HomeRouter(interactor: interactor,
                       viewController: presenter,
-                      createPostBuilder: createPostBuilder)
+                      createPostBuilder: createPostBuilder,
+                      profileBuilder: profileBuilder)
   }
 }
