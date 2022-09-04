@@ -8,7 +8,7 @@
 import XCTest
 @testable import Posterr
 
-class UserSQLServiceTests: XCTestCase {
+final class UserSQLServiceTests: XCTestCase {
 
   var sut: UserSQLService?
 

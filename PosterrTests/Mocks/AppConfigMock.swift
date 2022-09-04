@@ -8,7 +8,7 @@
 import Foundation
 @testable import Posterr
 
-struct AppConfigMock: PosterrAppConfig {
+final class AppConfigMock: PosterrAppConfig {
   var postMaxLegnth: Int = 777
 
   var limitOfPostsPerDay: Int = 5

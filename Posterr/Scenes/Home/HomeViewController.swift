@@ -12,7 +12,6 @@ protocol HomePresentable {
   var listener: HomePresentableListener? { get set }
   func loadUser(_ user: User)
   func loadPosts(_ posts: [Post])
-  func showErrorScreen()
 }
 
 protocol HomePresentableListener: AnyObject {
@@ -106,10 +105,6 @@ extension HomeViewController: HomePresentable {
 
   func loadPosts(_ posts: [Post]) {
     self.postsTableViewDataSource.posts = posts
-  }
-
-  func showErrorScreen() {
-
   }
 }
 

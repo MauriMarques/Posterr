@@ -8,18 +8,22 @@
 import Foundation
 
 protocol HomeBuildable {
-  func build(sessionService: SessionService, postService: PostService) -> HomeRouting
+  func build() -> HomeRouting
 }
 
 struct HomeBuilder: HomeBuildable {
 
+  private let sessionService: SessionService
   private let appConfig: PosterrAppConfig
+  private let postService: PostService
 
-  init(appConfig: PosterrAppConfig) {
+  init(sessionService: SessionService, postService: PostService, appConfig: PosterrAppConfig) {
+    self.sessionService = sessionService
     self.appConfig = appConfig
+    self.postService = postService
   }
 
-  func build(sessionService: SessionService, postService: PostService) -> HomeRouting {
+  func build() -> HomeRouting {
     let presenter = HomeViewController()
     let interactor = HomeInteractor(presenter: presenter,
                                     sessionService: sessionService,

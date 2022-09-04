@@ -67,6 +67,23 @@
 		BDE8512928C4FEC6008FFC67 /* SQLDatabaseCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */; };
 		BDE8512B28C50D65008FFC67 /* CreatePostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8512A28C50D65008FFC67 /* CreatePostUITests.swift */; };
 		BDE8512E28C51A62008FFC67 /* ProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8512D28C51A62008FFC67 /* ProfileUITests.swift */; };
+		BDE8513128C5478B008FFC67 /* HomeBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513028C5478B008FFC67 /* HomeBuilderTests.swift */; };
+		BDE8513328C547DA008FFC67 /* SessionServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513228C547DA008FFC67 /* SessionServiceMock.swift */; };
+		BDE8513528C54829008FFC67 /* PostsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513428C54829008FFC67 /* PostsServiceMock.swift */; };
+		BDE8513728C54954008FFC67 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513628C54954008FFC67 /* HomeInteractorTests.swift */; };
+		BDE8513928C54A13008FFC67 /* HomePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513828C54A13008FFC67 /* HomePresenterSpy.swift */; };
+		BDE8513B28C54BAC008FFC67 /* HomeRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513A28C54BAC008FFC67 /* HomeRouterSpy.swift */; };
+		BDE8513E28C55203008FFC67 /* CreatePostBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513D28C55203008FFC67 /* CreatePostBuilderTests.swift */; };
+		BDE8514028C552F4008FFC67 /* CreatePostInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8513F28C552F4008FFC67 /* CreatePostInteractorTests.swift */; };
+		BDE8514228C55349008FFC67 /* CreatePostPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514128C55349008FFC67 /* CreatePostPresenterSpy.swift */; };
+		BDE8514428C553E9008FFC67 /* CreatePostRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514328C553E9008FFC67 /* CreatePostRouterSpy.swift */; };
+		BDE8514628C5548F008FFC67 /* CreatePostInteractorListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514528C5548F008FFC67 /* CreatePostInteractorListenerMock.swift */; };
+		BDE8514928C55B62008FFC67 /* ProfileBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514828C55B62008FFC67 /* ProfileBuilderTests.swift */; };
+		BDE8514B28C55BAA008FFC67 /* ProfileInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514A28C55BAA008FFC67 /* ProfileInteractorTests.swift */; };
+		BDE8514D28C55BDB008FFC67 /* ProfileRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514C28C55BDB008FFC67 /* ProfileRouterSpy.swift */; };
+		BDE8514F28C55C9A008FFC67 /* ProfilePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514E28C55C9A008FFC67 /* ProfilePresenterSpy.swift */; };
+		BDE8515128C55DFA008FFC67 /* ProfileInteractorListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8515028C55DFA008FFC67 /* ProfileInteractorListenerMock.swift */; };
+		BDE8515428C55F0C008FFC67 /* PostType+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8515328C55F0C008FFC67 /* PostType+Equatable.swift */; };
 		BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FAC28BC1CAF004192D4 /* posterr.db */; };
 		BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */; };
 		BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FB328BCEECB004192D4 /* UserService.swift */; };
@@ -167,6 +184,23 @@
 		BDE8512328C4FCFC008FFC67 /* HomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITests.swift; sourceTree = "<group>"; };
 		BDE8512A28C50D65008FFC67 /* CreatePostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUITests.swift; sourceTree = "<group>"; };
 		BDE8512D28C51A62008FFC67 /* ProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUITests.swift; sourceTree = "<group>"; };
+		BDE8513028C5478B008FFC67 /* HomeBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilderTests.swift; sourceTree = "<group>"; };
+		BDE8513228C547DA008FFC67 /* SessionServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionServiceMock.swift; sourceTree = "<group>"; };
+		BDE8513428C54829008FFC67 /* PostsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServiceMock.swift; sourceTree = "<group>"; };
+		BDE8513628C54954008FFC67 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		BDE8513828C54A13008FFC67 /* HomePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterSpy.swift; sourceTree = "<group>"; };
+		BDE8513A28C54BAC008FFC67 /* HomeRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterSpy.swift; sourceTree = "<group>"; };
+		BDE8513D28C55203008FFC67 /* CreatePostBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostBuilderTests.swift; sourceTree = "<group>"; };
+		BDE8513F28C552F4008FFC67 /* CreatePostInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractorTests.swift; sourceTree = "<group>"; };
+		BDE8514128C55349008FFC67 /* CreatePostPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostPresenterSpy.swift; sourceTree = "<group>"; };
+		BDE8514328C553E9008FFC67 /* CreatePostRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouterSpy.swift; sourceTree = "<group>"; };
+		BDE8514528C5548F008FFC67 /* CreatePostInteractorListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractorListenerMock.swift; sourceTree = "<group>"; };
+		BDE8514828C55B62008FFC67 /* ProfileBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBuilderTests.swift; sourceTree = "<group>"; };
+		BDE8514A28C55BAA008FFC67 /* ProfileInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorTests.swift; sourceTree = "<group>"; };
+		BDE8514C28C55BDB008FFC67 /* ProfileRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouterSpy.swift; sourceTree = "<group>"; };
+		BDE8514E28C55C9A008FFC67 /* ProfilePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterSpy.swift; sourceTree = "<group>"; };
+		BDE8515028C55DFA008FFC67 /* ProfileInteractorListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorListenerMock.swift; sourceTree = "<group>"; };
+		BDE8515328C55F0C008FFC67 /* PostType+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostType+Equatable.swift"; sourceTree = "<group>"; };
 		BDF96FA628BBF384004192D4 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
 		BDF96FAC28BC1CAF004192D4 /* posterr.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = posterr.db; sourceTree = "<group>"; };
 		BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -271,8 +305,18 @@
 			isa = PBXGroup;
 			children = (
 				BD05194D28C3EF9B0051DB34 /* AppConfigMock.swift */,
+				BDE8514528C5548F008FFC67 /* CreatePostInteractorListenerMock.swift */,
+				BDE8514128C55349008FFC67 /* CreatePostPresenterSpy.swift */,
+				BDE8514328C553E9008FFC67 /* CreatePostRouterSpy.swift */,
+				BDE8513828C54A13008FFC67 /* HomePresenterSpy.swift */,
+				BDE8513A28C54BAC008FFC67 /* HomeRouterSpy.swift */,
 				BD05198828C454E90051DB34 /* ParentPostViewModelMock.swift */,
 				BD05198A28C455090051DB34 /* PostHeaderViewModelMock.swift */,
+				BDE8513428C54829008FFC67 /* PostsServiceMock.swift */,
+				BDE8515028C55DFA008FFC67 /* ProfileInteractorListenerMock.swift */,
+				BDE8514E28C55C9A008FFC67 /* ProfilePresenterSpy.swift */,
+				BDE8514C28C55BDB008FFC67 /* ProfileRouterSpy.swift */,
+				BDE8513228C547DA008FFC67 /* SessionServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -290,6 +334,7 @@
 		BD05195A28C428790051DB34 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BDE8515228C55EFD008FFC67 /* Extensions */,
 				BD05195E28C42E300051DB34 /* Helpers */,
 				BD05195B28C428800051DB34 /* Views */,
 			);
@@ -318,9 +363,9 @@
 		BD05196C28C44BA90051DB34 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				BD05197728C44FC80051DB34 /* CreatePostViewControllerTests.swift */,
-				BD05196D28C44BE70051DB34 /* HomeViewControllerTests.swift */,
-				BD05198628C452B70051DB34 /* ProfileViewControllerTests.swift */,
+				BDE8514728C55B50008FFC67 /* Profile */,
+				BDE8513C28C551F4008FFC67 /* CreatePost */,
+				BDE8512F28C5477B008FFC67 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -506,6 +551,44 @@
 				BD05194528C3B9FB0051DB34 /* Views */,
 			);
 			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		BDE8512F28C5477B008FFC67 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BDE8513028C5478B008FFC67 /* HomeBuilderTests.swift */,
+				BDE8513628C54954008FFC67 /* HomeInteractorTests.swift */,
+				BD05196D28C44BE70051DB34 /* HomeViewControllerTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BDE8513C28C551F4008FFC67 /* CreatePost */ = {
+			isa = PBXGroup;
+			children = (
+				BDE8513D28C55203008FFC67 /* CreatePostBuilderTests.swift */,
+				BDE8513F28C552F4008FFC67 /* CreatePostInteractorTests.swift */,
+				BD05197728C44FC80051DB34 /* CreatePostViewControllerTests.swift */,
+			);
+			path = CreatePost;
+			sourceTree = "<group>";
+		};
+		BDE8514728C55B50008FFC67 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BDE8514828C55B62008FFC67 /* ProfileBuilderTests.swift */,
+				BDE8514A28C55BAA008FFC67 /* ProfileInteractorTests.swift */,
+				BD05198628C452B70051DB34 /* ProfileViewControllerTests.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BDE8515228C55EFD008FFC67 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDE8515328C55F0C008FFC67 /* PostType+Equatable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BDF96FA928BC0D4F004192D4 /* Database */ = {
@@ -943,19 +1026,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE8514628C5548F008FFC67 /* CreatePostInteractorListenerMock.swift in Sources */,
 				BD237EF328BE3CEF005307C5 /* PostSQLServiceTests.swift in Sources */,
 				BD05196E28C44BE70051DB34 /* HomeViewControllerTests.swift in Sources */,
+				BDE8513328C547DA008FFC67 /* SessionServiceMock.swift in Sources */,
+				BDE8514B28C55BAA008FFC67 /* ProfileInteractorTests.swift in Sources */,
+				BDE8513728C54954008FFC67 /* HomeInteractorTests.swift in Sources */,
+				BDE8513B28C54BAC008FFC67 /* HomeRouterSpy.swift in Sources */,
+				BDE8513E28C55203008FFC67 /* CreatePostBuilderTests.swift in Sources */,
+				BDE8513928C54A13008FFC67 /* HomePresenterSpy.swift in Sources */,
+				BDE8514428C553E9008FFC67 /* CreatePostRouterSpy.swift in Sources */,
+				BDE8513128C5478B008FFC67 /* HomeBuilderTests.swift in Sources */,
+				BDE8513528C54829008FFC67 /* PostsServiceMock.swift in Sources */,
+				BDE8515128C55DFA008FFC67 /* ProfileInteractorListenerMock.swift in Sources */,
 				BD05198B28C455090051DB34 /* PostHeaderViewModelMock.swift in Sources */,
 				BD05198928C454E90051DB34 /* ParentPostViewModelMock.swift in Sources */,
 				BD05197828C44FC80051DB34 /* CreatePostViewControllerTests.swift in Sources */,
 				BD05198728C452B70051DB34 /* ProfileViewControllerTests.swift in Sources */,
 				BD237EF028BE3B8E005307C5 /* InMemorySessionServiceTests.swift in Sources */,
+				BDE8514228C55349008FFC67 /* CreatePostPresenterSpy.swift in Sources */,
 				BD05196828C434630051DB34 /* ParentPostViewTests.swift in Sources */,
 				BD05194E28C3EF9B0051DB34 /* AppConfigMock.swift in Sources */,
+				BDE8514928C55B62008FFC67 /* ProfileBuilderTests.swift in Sources */,
 				BD05195D28C428A20051DB34 /* ProfileImageViewTests.swift in Sources */,
+				BDE8514F28C55C9A008FFC67 /* ProfilePresenterSpy.swift in Sources */,
 				BD05196028C42E5B0051DB34 /* SnapshotViewTestable.swift in Sources */,
+				BDE8514D28C55BDB008FFC67 /* ProfileRouterSpy.swift in Sources */,
 				BD05196428C4330D0051DB34 /* PostHeaderViewTests.swift in Sources */,
+				BDE8515428C55F0C008FFC67 /* PostType+Equatable.swift in Sources */,
 				BDF96FCD28BE3735004192D4 /* UserSQLServiceTests.swift in Sources */,
+				BDE8514028C552F4008FFC67 /* CreatePostInteractorTests.swift in Sources */,
 				BD05196228C42F530051DB34 /* PostsTableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

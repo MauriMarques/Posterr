@@ -8,7 +8,7 @@
 import XCTest
 @testable import Posterr
 
-class PostSQLServiceTests: XCTestCase {
+final class PostSQLServiceTests: XCTestCase {
 
   var sut: PostSQLService?
   var appConfig = AppConfigMock()

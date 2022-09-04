@@ -8,7 +8,7 @@
 import XCTest
 @testable import Posterr
 
-class InMemorySessionServiceTests: XCTestCase {
+final class InMemorySessionServiceTests: XCTestCase {
 
   var sut: InMemorySessionService?
 

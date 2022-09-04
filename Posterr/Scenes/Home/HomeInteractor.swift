@@ -40,7 +40,6 @@ extension HomeInteractor: HomePresentableListener {
 
   func didLoad() {
     guard let user = sessionService.user else {
-      presenter.showErrorScreen()
       return
     }
     let posts = postService.allPosts()

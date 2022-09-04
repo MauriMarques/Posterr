@@ -53,8 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           let postService = postService else {
             return
           }
-    let homeRouter = HomeBuilder(appConfig: appConfig).build(sessionService: sessionService,
-                                                             postService: postService)
+    let homeRouter = HomeBuilder(sessionService: sessionService,
+                                 postService: postService,
+                                 appConfig: appConfig).build()
     self.homeRouter = homeRouter
     homeRouter.launch(from: window)
   }
