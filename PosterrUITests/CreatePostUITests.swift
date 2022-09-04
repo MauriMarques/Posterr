@@ -24,6 +24,28 @@ final class CreatePostUITests: PosterrUITests {
     XCTAssert(app.staticTexts[postContent].waitForExistence(timeout: timeout))
   }
 
+  func testCreatePostFromProfileScreen() {
+    app.launch()
+
+    let postContent = "My first post!"
+
+    app.otherElements["profile_bar_view"].tap()
+    app.buttons["profile_compose_button"].tap()
+    app.textFields["content_text_field"].typeText(postContent)
+    app.buttons["create_button"].tap()
+
+    XCTAssert(app.tables.cells.element(matching: .cell,
+                                       identifier: "post_cell").waitForExistence(timeout: timeout))
+    XCTAssert(app.staticTexts[postContent].waitForExistence(timeout: timeout))
+  }
+
+  func testCancelPostCreation() {
+    app.launch()
+    app.buttons["home_compose_button"].tap()
+    app.buttons["Cancel"].tap()
+    XCTAssert(app.staticTexts["empty_label"].waitForExistence(timeout: timeout))
+  }
+
   func testReachPostMaxLength() {
     app.launch()
 
