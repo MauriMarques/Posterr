@@ -16,3 +16,24 @@ bundle install
 ```
 bundle exec pod install
 ```
+
+#### Running tests
+
+##### Unit tests
+```
+bunde exec fastlane run_unittests
+```
+
+Snapshot tests at `./PosterrTests/Common/Helpers/__Snapshots__` and `./PosterrTests/Scenes/__Snapshots__`
+
+##### UI tests
+```
+bunde exec fastlane run_UItests
+```
+
+##### All tests (Unit and UI)
+```
+bunde exec fastlane run_all_tests
+```
+
+* Check for coverage Slather report at `./fastlane/slather_coverage`
