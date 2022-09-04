@@ -14,10 +14,48 @@ default_platform(:ios)
 
 platform :ios do
   desc "Run Posterr unit tests and generate coverage report"
-  lane :run_uitests do
+  lane :run_unittests do
     scan(
       workspace: "Posterr.xcworkspace",
       scheme: "PosterrTests",
+      destination: "platform=iOS Simulator,name=iPhone 12 Pro,OS=15.0",
+      clean: true,
+      code_coverage: true,
+      output_directory: "fastlane/test_output"
+    )
+    slather(
+      workspace: "Posterr.xcworkspace",
+      proj: "Posterr.xcodeproj",
+      scheme: "Posterr",
+      html: true,
+      output_directory: "fastlane/slather_coverage"
+    )
+  end
+
+  desc "Run Posterr UI tests and generate coverage report"
+  lane :run_UItests do
+    scan(
+      workspace: "Posterr.xcworkspace",
+      scheme: "PosterrUITests",
+      destination: "platform=iOS Simulator,name=iPhone 12 Pro,OS=15.0",
+      clean: true,
+      code_coverage: true,
+      output_directory: "fastlane/test_output"
+    )
+    slather(
+      workspace: "Posterr.xcworkspace",
+      proj: "Posterr.xcodeproj",
+      scheme: "Posterr",
+      html: true,
+      output_directory: "fastlane/slather_coverage"
+    )
+  end
+
+  desc "Run Posterr unit and UI tests and generate coverage report"
+  lane :run_all_tests do
+    scan(
+      workspace: "Posterr.xcworkspace",
+      scheme: "Posterr",
       destination: "platform=iOS Simulator,name=iPhone 12 Pro,OS=15.0",
       clean: true,
       code_coverage: true,
