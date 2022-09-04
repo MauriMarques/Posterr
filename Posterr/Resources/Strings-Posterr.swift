@@ -24,6 +24,10 @@ internal enum L10n {
   }
   /// What's happening?
   internal static let createPostsContentPlaceholderText = L10n.tr("Localization", "create_posts_content_placeholder_text", fallback: "What's happening?")
+  /// Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow.
+  internal static let createPostsLimitReachedText = L10n.tr("Localization", "create_posts_limit_reached_text", fallback: "Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow.")
+  /// Too many posts for today
+  internal static let createPostsLimitReachedTitle = L10n.tr("Localization", "create_posts_limit_reached_title", fallback: "Too many posts for today")
   /// Quote
   internal static let createQuoteButtonTitle = L10n.tr("Localization", "create_quote_button_title", fallback: "Quote")
   /// Repost
@@ -33,6 +37,8 @@ internal enum L10n {
   /// 
   ///   Created by Maurício Martinez Marques on 03/09/22.
   internal static let homeScreenTitle = L10n.tr("Localization", "home_screen_title", fallback: "Home")
+  /// Ok
+  internal static let okButtonTitle = L10n.tr("Localization", "ok_button_title", fallback: "Ok")
   /// posts: %@
   internal static func postsCountText(_ p1: Any) -> String {
     return L10n.tr("Localization", "posts_count_text", String(describing: p1), fallback: "posts: %@")

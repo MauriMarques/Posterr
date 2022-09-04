@@ -106,11 +106,12 @@ extension CreatePostViewController: CreatePostPresentable {
   }
 
   func showPostsCreationLimitReachedAlert() {
-    let alert = UIAlertController(title: "\u{2639} \n Too many posts for today",
-                                  message: "Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow.",
+    let alert = UIAlertController(title: L10n.createPostsLimitReachedTitle,
+                                  message: L10n.createPostsLimitReachedText,
                                   preferredStyle: .alert)
 
-    alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { [weak self] _ in
+    alert.addAction(UIAlertAction(title: L10n.okButtonTitle,
+                                  style: .destructive, handler: { [weak self] _ in
       self?.listener?.didCancel()
     }))
     self.present(alert, animated: true, completion: nil)

@@ -18,7 +18,7 @@ struct UserSQLService: UserService {
 
   private let database: Connection?
 
-  init?(dbFilename: String = "posterr.db") {
+  init?(dbFilename: String) {
     do {
       guard let databasePath = DatabaseHelper(dbFilename: dbFilename).localDbFilename else {
         return nil

@@ -38,12 +38,9 @@
 		BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07657D28BBD4FE00725121 /* AppDelegate.swift */; };
 		BD07658728BBD50000725121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD07658628BBD50000725121 /* Assets.xcassets */; };
 		BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD07658828BBD50000725121 /* LaunchScreen.storyboard */; };
-		BD07659F28BBD50100725121 /* PosterrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07659E28BBD50100725121 /* PosterrUITests.swift */; };
-		BD0765A128BBD50100725121 /* PosterrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0765A028BBD50100725121 /* PosterrUITestsLaunchTests.swift */; };
 		BD237EED28BE3A52005307C5 /* posterr_test.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FCF28BE37C8004192D4 /* posterr_test.db */; };
 		BD237EF028BE3B8E005307C5 /* InMemorySessionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EEF28BE3B8E005307C5 /* InMemorySessionServiceTests.swift */; };
 		BD237EF328BE3CEF005307C5 /* PostSQLServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EF228BE3CEF005307C5 /* PostSQLServiceTests.swift */; };
-		BD237EF528BE3F4E005307C5 /* SQLDatabaseCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */; };
 		BD237EF928BF7414005307C5 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EF828BF7414005307C5 /* HomeRouter.swift */; };
 		BD237EFB28BF741D005307C5 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EFA28BF741D005307C5 /* HomeInteractor.swift */; };
 		BD237EFD28BF742C005307C5 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EFC28BF742C005307C5 /* HomeBuilder.swift */; };
@@ -66,6 +63,10 @@
 		BD38586128C15D5B00CF9CB3 /* CreatePostInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38586028C15D5B00CF9CB3 /* CreatePostInteractor.swift */; };
 		BD38586328C15D6600CF9CB3 /* CreatePostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38586228C15D6600CF9CB3 /* CreatePostRouter.swift */; };
 		BD38586528C15D7000CF9CB3 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38586428C15D7000CF9CB3 /* CreatePostViewController.swift */; };
+		BDE8512428C4FCFC008FFC67 /* HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8512328C4FCFC008FFC67 /* HomeUITests.swift */; };
+		BDE8512928C4FEC6008FFC67 /* SQLDatabaseCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */; };
+		BDE8512B28C50D65008FFC67 /* CreatePostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8512A28C50D65008FFC67 /* CreatePostUITests.swift */; };
+		BDE8512E28C51A62008FFC67 /* ProfileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8512D28C51A62008FFC67 /* ProfileUITests.swift */; };
 		BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FAC28BC1CAF004192D4 /* posterr.db */; };
 		BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */; };
 		BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FB328BCEECB004192D4 /* UserService.swift */; };
@@ -98,8 +99,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07A16343F15D0B92B4B87082 /* Pods-Posterr.uitesting.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posterr.uitesting.xcconfig"; path = "Target Support Files/Pods-Posterr/Pods-Posterr.uitesting.xcconfig"; sourceTree = "<group>"; };
 		1F6F073A8A38F5D983400A5B /* Pods-Posterr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posterr.debug.xcconfig"; path = "Target Support Files/Pods-Posterr/Pods-Posterr.debug.xcconfig"; sourceTree = "<group>"; };
 		2AF4CFD8B248F3C3CA2447EF /* Pods-PosterrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrTests.release.xcconfig"; path = "Target Support Files/Pods-PosterrTests/Pods-PosterrTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F086E6375BAC36CB4C9A7CB /* Pods-PosterrTests.uitesting.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrTests.uitesting.xcconfig"; path = "Target Support Files/Pods-PosterrTests/Pods-PosterrTests.uitesting.xcconfig"; sourceTree = "<group>"; };
 		74F07633989FE7A8A9A11286 /* Pods_Posterr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Posterr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C08C08CAC37CA67BD12054 /* Pods-PosterrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrTests.debug.xcconfig"; path = "Target Support Files/Pods-PosterrTests/Pods-PosterrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD05192B28C19A6D0051DB34 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
@@ -134,8 +137,6 @@
 		BD07658B28BBD50000725121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD07659028BBD50100725121 /* PosterrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD07659A28BBD50100725121 /* PosterrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PosterrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD07659E28BBD50100725121 /* PosterrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITests.swift; sourceTree = "<group>"; };
-		BD0765A028BBD50100725121 /* PosterrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BD237EEF28BE3B8E005307C5 /* InMemorySessionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemorySessionServiceTests.swift; sourceTree = "<group>"; };
 		BD237EF228BE3CEF005307C5 /* PostSQLServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSQLServiceTests.swift; sourceTree = "<group>"; };
 		BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDatabaseCleaner.swift; sourceTree = "<group>"; };
@@ -161,6 +162,11 @@
 		BD38586028C15D5B00CF9CB3 /* CreatePostInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostInteractor.swift; sourceTree = "<group>"; };
 		BD38586228C15D6600CF9CB3 /* CreatePostRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostRouter.swift; sourceTree = "<group>"; };
 		BD38586428C15D7000CF9CB3 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		BDE8511B28C46147008FFC67 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BDE8512228C4FCFC008FFC67 /* PosterrUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PosterrUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		BDE8512328C4FCFC008FFC67 /* HomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUITests.swift; sourceTree = "<group>"; };
+		BDE8512A28C50D65008FFC67 /* CreatePostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostUITests.swift; sourceTree = "<group>"; };
+		BDE8512D28C51A62008FFC67 /* ProfileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUITests.swift; sourceTree = "<group>"; };
 		BDF96FA628BBF384004192D4 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
 		BDF96FAC28BC1CAF004192D4 /* posterr.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = posterr.db; sourceTree = "<group>"; };
 		BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		C885FA102F632596CDB43081 /* Pods-PosterrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrUITests.release.xcconfig"; path = "Target Support Files/Pods-PosterrUITests/Pods-PosterrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBBE831AE93CCE2CD4C2249B /* Pods-PosterrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrUITests.debug.xcconfig"; path = "Target Support Files/Pods-PosterrUITests/Pods-PosterrUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDA6F6F21D7751DD5DEA6D05 /* Pods_PosterrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PosterrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC751E2777A9A6021D82AD2F /* Pods-PosterrUITests.uitesting.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PosterrUITests.uitesting.xcconfig"; path = "Target Support Files/Pods-PosterrUITests/Pods-PosterrUITests.uitesting.xcconfig"; sourceTree = "<group>"; };
 		E404C841B2129B9C73713909 /* Pods_PosterrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PosterrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F674F23AB936B3388D4CF8C3 /* Pods-Posterr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posterr.release.xcconfig"; path = "Target Support Files/Pods-Posterr/Pods-Posterr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +220,7 @@
 		3F2275061E0B179C2F66D5DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDE8511B28C46147008FFC67 /* XCTest.framework */,
 				BDF96FA628BBF384004192D4 /* libswift_Concurrency.tbd */,
 				74F07633989FE7A8A9A11286 /* Pods_Posterr.framework */,
 				E404C841B2129B9C73713909 /* Pods_PosterrTests.framework */,
@@ -360,7 +368,6 @@
 			isa = PBXGroup;
 			children = (
 				BD05195A28C428790051DB34 /* Common */,
-				BDF96FCE28BE379C004192D4 /* Database */,
 				BD05194C28C3EF910051DB34 /* Mocks */,
 				BD237EF128BE3CDB005307C5 /* PostService */,
 				BD05196C28C44BA90051DB34 /* Scenes */,
@@ -373,8 +380,10 @@
 		BD07659D28BBD50100725121 /* PosterrUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BD07659E28BBD50100725121 /* PosterrUITests.swift */,
-				BD0765A028BBD50100725121 /* PosterrUITestsLaunchTests.swift */,
+				BDE8512228C4FCFC008FFC67 /* PosterrUITests-Bridging-Header.h */,
+				BDE8512A28C50D65008FFC67 /* CreatePostUITests.swift */,
+				BDE8512328C4FCFC008FFC67 /* HomeUITests.swift */,
+				BDE8512D28C51A62008FFC67 /* ProfileUITests.swift */,
 			);
 			path = PosterrUITests;
 			sourceTree = "<group>";
@@ -503,6 +512,8 @@
 			isa = PBXGroup;
 			children = (
 				BDF96FAC28BC1CAF004192D4 /* posterr.db */,
+				BDF96FCF28BE37C8004192D4 /* posterr_test.db */,
+				BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */,
 				BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */,
 			);
 			path = Database;
@@ -556,15 +567,6 @@
 			path = PostService;
 			sourceTree = "<group>";
 		};
-		BDF96FCE28BE379C004192D4 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				BDF96FCF28BE37C8004192D4 /* posterr_test.db */,
-				BD237EF428BE3F4D005307C5 /* SQLDatabaseCleaner.swift */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		BDF96FD128BE37CC004192D4 /* UserService */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,6 +584,9 @@
 				2AF4CFD8B248F3C3CA2447EF /* Pods-PosterrTests.release.xcconfig */,
 				CBBE831AE93CCE2CD4C2249B /* Pods-PosterrUITests.debug.xcconfig */,
 				C885FA102F632596CDB43081 /* Pods-PosterrUITests.release.xcconfig */,
+				07A16343F15D0B92B4B87082 /* Pods-Posterr.uitesting.xcconfig */,
+				5F086E6375BAC36CB4C9A7CB /* Pods-PosterrTests.uitesting.xcconfig */,
+				DC751E2777A9A6021D82AD2F /* Pods-PosterrUITests.uitesting.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -669,6 +674,7 @@
 					};
 					BD07659928BBD50100725121 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = BD07657928BBD4FE00725121;
 					};
 				};
@@ -896,6 +902,7 @@
 				BD05193828C398650051DB34 /* ProfileBuilder.swift in Sources */,
 				BD05193A28C398700051DB34 /* ProfileInteractor.swift in Sources */,
 				BD38584B28C0672500CF9CB3 /* CellIdentifiable.swift in Sources */,
+				BDE8512928C4FEC6008FFC67 /* SQLDatabaseCleaner.swift in Sources */,
 				BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */,
 				BD05194B28C3E1860051DB34 /* AppConfig.swift in Sources */,
 				BD237EF928BF7414005307C5 /* HomeRouter.swift in Sources */,
@@ -945,7 +952,6 @@
 				BD237EF028BE3B8E005307C5 /* InMemorySessionServiceTests.swift in Sources */,
 				BD05196828C434630051DB34 /* ParentPostViewTests.swift in Sources */,
 				BD05194E28C3EF9B0051DB34 /* AppConfigMock.swift in Sources */,
-				BD237EF528BE3F4E005307C5 /* SQLDatabaseCleaner.swift in Sources */,
 				BD05195D28C428A20051DB34 /* ProfileImageViewTests.swift in Sources */,
 				BD05196028C42E5B0051DB34 /* SnapshotViewTestable.swift in Sources */,
 				BD05196428C4330D0051DB34 /* PostHeaderViewTests.swift in Sources */,
@@ -958,8 +964,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD0765A128BBD50100725121 /* PosterrUITestsLaunchTests.swift in Sources */,
-				BD07659F28BBD50100725121 /* PosterrUITests.swift in Sources */,
+				BDE8512428C4FCFC008FFC67 /* HomeUITests.swift in Sources */,
+				BDE8512B28C50D65008FFC67 /* CreatePostUITests.swift in Sources */,
+				BDE8512E28C51A62008FFC67 /* ProfileUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1139,6 +1146,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmarques.posterr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1231,6 +1239,7 @@
 			baseConfigurationReference = CBBE831AE93CCE2CD4C2249B /* Pods-PosterrUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1242,7 +1251,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmarques.posterr.PosterrUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PosterrUITests/PosterrUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Posterr;
@@ -1254,6 +1266,7 @@
 			baseConfigurationReference = C885FA102F632596CDB43081 /* Pods-PosterrUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1266,11 +1279,167 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmarques.posterr.PosterrUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PosterrUITests/PosterrUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Posterr;
 			};
 			name = Release;
+		};
+		BDE8511E28C469A7008FFC67 /* UITesting */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = UITesting;
+		};
+		BDE8511F28C469A7008FFC67 /* UITesting */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07A16343F15D0B92B4B87082 /* Pods-Posterr.uitesting.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"UITesting=1",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Posterr/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmarques.posterr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG UITesting";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = UITesting;
+		};
+		BDE8512028C469A7008FFC67 /* UITesting */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F086E6375BAC36CB4C9A7CB /* Pods-PosterrTests.uitesting.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmarques.posterr.PosterrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Posterr.app/Posterr";
+			};
+			name = UITesting;
+		};
+		BDE8512128C469A7008FFC67 /* UITesting */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC751E2777A9A6021D82AD2F /* Pods-PosterrUITests.uitesting.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"UITesting=1",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmarques.posterr.PosterrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG UITesting";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PosterrUITests/PosterrUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Posterr;
+			};
+			name = UITesting;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1279,6 +1448,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD0765A228BBD50100725121 /* Debug */,
+				BDE8511E28C469A7008FFC67 /* UITesting */,
 				BD0765A328BBD50100725121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1288,6 +1458,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD0765A528BBD50100725121 /* Debug */,
+				BDE8511F28C469A7008FFC67 /* UITesting */,
 				BD0765A628BBD50100725121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1297,6 +1468,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD0765A828BBD50100725121 /* Debug */,
+				BDE8512028C469A7008FFC67 /* UITesting */,
 				BD0765A928BBD50100725121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1306,6 +1478,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD0765AB28BBD50100725121 /* Debug */,
+				BDE8512128C469A7008FFC67 /* UITesting */,
 				BD0765AC28BBD50100725121 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

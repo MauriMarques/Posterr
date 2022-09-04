@@ -6,6 +6,9 @@ def common_dependecies
   pod 'SwiftLint', '0.47.0'
   pod 'SQLite.swift', '0.13.3'
   pod 'SwiftGen', '6.6.2'
+end
+
+def tests_dependencies
   pod 'SnapshotTesting', '1.8.2'
 end
 
@@ -15,8 +18,10 @@ end
 
 target 'PosterrTests' do
   common_dependecies
+  tests_dependencies
 end
 
 target 'PosterrUITests' do
   common_dependecies
+  tests_dependencies
 end

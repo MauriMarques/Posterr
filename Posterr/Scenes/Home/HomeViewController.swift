@@ -27,7 +27,7 @@ final class HomeViewController: UIViewController {
 
   struct AccessibilityIdentifier {
     static let composeButton = "home_compose_button"
-    static let profileBarView = ProfileHeaderView.AccessibilityIdentifier.`self`
+    static let profileBarView = ProfileBarView.AccessibilityIdentifier.`self`
     static let emptyLabel = PostsTableView.AccessibilityIdentifier.emptyLabel
     static let postCell = PostTableViewCell.AccessibilityIdentifier.`self`
     static let quoteCell = QuoteTableViewCell.AccessibilityIdentifier.`self`
@@ -77,6 +77,7 @@ final class HomeViewController: UIViewController {
 
     let createPostBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
                                                   target: self, action: #selector(didClickOnCreatePost))
+    createPostBarButtonItem.accessibilityIdentifier = AccessibilityIdentifier.composeButton
     navigationItem.setRightBarButton(createPostBarButtonItem,
                                      animated: false)
   }

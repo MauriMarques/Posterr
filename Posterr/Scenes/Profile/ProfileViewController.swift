@@ -23,7 +23,7 @@ protocol ProfilePresentableListener: AnyObject {
 final class ProfileViewController: UIViewController {
 
   struct AccessibilityIdentifier {
-    static let composeButton = "home_compose_button"
+    static let composeButton = "profile_compose_button"
     static let profileHeaderView = ProfileHeaderView.AccessibilityIdentifier.`self`
     static let emptyLabel = PostsTableView.AccessibilityIdentifier.emptyLabel
     static let postCell = PostTableViewCell.AccessibilityIdentifier.`self`
@@ -99,6 +99,7 @@ final class ProfileViewController: UIViewController {
 
     let createPostBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose,
                                                   target: self, action: #selector(didClickOnCreatePost))
+    createPostBarButtonItem.accessibilityIdentifier = AccessibilityIdentifier.composeButton
     navigationItem.setRightBarButton(createPostBarButtonItem,
                                      animated: false)
   }

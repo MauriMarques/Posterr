@@ -6,7 +6,6 @@
 //
 
 import SQLite
-@testable import Posterr
 
 struct SQLDatabaseCleaner {
 

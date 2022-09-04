@@ -14,6 +14,9 @@
 "cancel_button_title" = "Cancel";
 "create_posts_content_placeholder_text" = "What's happening?";
 "create_posts_content_counter_text" = "%@/%@";
+"create_posts_limit_reached_title" = "Too many posts for today";
+"create_posts_limit_reached_text" = "Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow.";
+"ok_button_title" = "Ok";
 "posts_empty_text" = "Nothing to show for now. \n\n\n Let's create some posts!";
 "posts_count_text" = "posts: %@";
 "quotes_count_text" = "quotes: %@";

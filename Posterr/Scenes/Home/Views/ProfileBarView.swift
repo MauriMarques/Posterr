@@ -82,6 +82,7 @@ extension ProfileBarView: ViewCodable {
   func configureView() {
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView))
     addGestureRecognizer(tapGesture)
+    isAccessibilityElement = true
     accessibilityIdentifier = AccessibilityIdentifier.`self`
   }
 }

@@ -21,7 +21,7 @@ struct PostSQLService: PostService {
   private let database: Connection?
   private let appConfig: PosterrAppConfig
 
-  init?(dbFilename: String = "posterr.db", appConfig: PosterrAppConfig) {
+  init?(dbFilename: String, appConfig: PosterrAppConfig) {
     self.appConfig = appConfig
     do {
       guard let databasePath = DatabaseHelper(dbFilename: dbFilename).localDbFilename else {
