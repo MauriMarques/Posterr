@@ -36,4 +36,4 @@ bunde exec fastlane run_UItests
 bunde exec fastlane run_all_tests
 ```
 
-* Check for coverage Slather report at `./fastlane/slather_coverage`
+* Check for coverage Slather report at `./fastlane/slather_coverage/index.html`
