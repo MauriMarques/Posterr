@@ -37,7 +37,7 @@ final class PostsTableView: UITableView {
 
   private let emptyStateLabel: UILabel = {
     let label = UILabel()
-    label.text = "Nothing to show for now. \n\n\n Let's create some posts!"
+    label.text = L10n.postsEmptyText
     label.font = .boldSystemFont(ofSize: 24.0)
     label.textAlignment = .center
     label.numberOfLines = 0

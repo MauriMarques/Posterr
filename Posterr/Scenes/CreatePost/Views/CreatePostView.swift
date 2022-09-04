@@ -22,7 +22,7 @@ final class CreatePostView: UIView {
   private lazy var contentTextField: UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = "What's happening?"
+    textField.placeholder = L10n.createPostsContentPlaceholderText
     textField.contentVerticalAlignment = .top
     textField.delegate = self
     textField.accessibilityIdentifier = AccessibilityIdentifier.contentTextField
@@ -38,7 +38,8 @@ final class CreatePostView: UIView {
   private lazy var charactersCounterLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "0/\(maxCharactersAllowed)"
+    label.text = L10n.createPostsContentCounterText(0,
+                                                    maxCharactersAllowed)
     label.textColor = .lightGray
     label.textAlignment = .right
     return label
@@ -47,7 +48,7 @@ final class CreatePostView: UIView {
   private lazy var createPostButton: UIButton = {
     let button = UIButton(type: .system)
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("Create", for: .normal)
+    button.setTitle(L10n.createButtonTitle, for: .normal)
     button.configuration = .filled()
     button.tintColor = .black
     button.isEnabled = false
@@ -64,7 +65,8 @@ final class CreatePostView: UIView {
   private let maxCharactersAllowed: Int
   private var contentText: String = String() {
     didSet {
-      charactersCounterLabel.text = "\(contentText.count)/\(maxCharactersAllowed)"
+      charactersCounterLabel.text = L10n.createPostsContentCounterText(contentText.count,
+                                                                       maxCharactersAllowed)
       createPostButton.isEnabled = !contentText.isEmpty
     }
   }

@@ -70,16 +70,16 @@ extension ProfileHeaderView: ViewModelSettable {
     userNameLabel.text = viewModel.userName
 
     let postsCountLabel = UILabel()
-    postsCountLabel.text = "posts: \(viewModel.createdPostsCount)"
+    postsCountLabel.text = L10n.postsCountText(viewModel.createdPostsCount)
     accountInfoStackView.addArrangedSubview(postsCountLabel)
     let quotesCountLabel = UILabel()
-    quotesCountLabel.text = "quotes: \(viewModel.createdQuotesCount)"
+    quotesCountLabel.text = L10n.quotesCountText(viewModel.createdQuotesCount)
     accountInfoStackView.addArrangedSubview(quotesCountLabel)
     let repostsCountLabel = UILabel()
-    repostsCountLabel.text = "reposts: \(viewModel.createdRepostsCount)"
+    repostsCountLabel.text = L10n.repostsCountText(viewModel.createdRepostsCount)
     accountInfoStackView.addArrangedSubview(repostsCountLabel)
 
-    accountCreationDateLabel.text = "member since \(viewModel.accountCreationDateString)"
+    accountCreationDateLabel.text = L10n.accountCreateionDateText(viewModel.accountCreationDateString)
   }
 }
 

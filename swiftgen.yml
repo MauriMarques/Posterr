@@ -1,0 +1,5 @@
+strings:
+  inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/
+  outputs:
+    templateName: structured-swift5
+    output: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Strings-${TARGET_NAME}.swift

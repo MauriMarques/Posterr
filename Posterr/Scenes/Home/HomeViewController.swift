@@ -50,7 +50,7 @@ final class HomeViewController: UIViewController {
     super.init(nibName: nil,
                bundle: nil)
     postsTableViewDataSource.postsTableView = postsTableView
-    title = "Home"
+    title = L10n.homeScreenTitle
   }
 
   required init?(coder: NSCoder) {
@@ -133,19 +133,19 @@ extension HomeViewController: UITableViewDelegate {
                                   message: nil,
                                   preferredStyle: .actionSheet)
 
-    alert.addAction(UIAlertAction(title: "Repost",
+    alert.addAction(UIAlertAction(title: L10n.createRepostButtonTitle,
                                   style: .default ,
                                   handler: { [weak self] _ in
       self?.listener?.didClickOnRepostPost(post)
     }))
 
-    alert.addAction(UIAlertAction(title: "Quote",
+    alert.addAction(UIAlertAction(title: L10n.createQuoteButtonTitle,
                                   style: .default ,
                                   handler: { [weak self] _ in
       self?.listener?.didClickOnQuotePost(post)
     }))
 
-    alert.addAction(UIAlertAction(title: "Cancel",
+    alert.addAction(UIAlertAction(title: L10n.cancelButtonTitle,
                                   style: .cancel,
                                   handler: nil))
 

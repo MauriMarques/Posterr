@@ -22,6 +22,8 @@
 		BD05194928C3C6950051DB34 /* PosterrAppConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD05194828C3C6950051DB34 /* PosterrAppConfig.plist */; };
 		BD05194B28C3E1860051DB34 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05194A28C3E1860051DB34 /* AppConfig.swift */; };
 		BD05194E28C3EF9B0051DB34 /* AppConfigMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05194D28C3EF9B0051DB34 /* AppConfigMock.swift */; };
+		BD05195328C403BB0051DB34 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD05195528C403BB0051DB34 /* Localization.strings */; };
+		BD05195928C4093A0051DB34 /* Strings-Posterr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05195828C4093A0051DB34 /* Strings-Posterr.swift */; };
 		BD07657E28BBD4FE00725121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07657D28BBD4FE00725121 /* AppDelegate.swift */; };
 		BD07658728BBD50000725121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD07658628BBD50000725121 /* Assets.xcassets */; };
 		BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD07658828BBD50000725121 /* LaunchScreen.storyboard */; };
@@ -105,6 +107,8 @@
 		BD05194828C3C6950051DB34 /* PosterrAppConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PosterrAppConfig.plist; sourceTree = "<group>"; };
 		BD05194A28C3E1860051DB34 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		BD05194D28C3EF9B0051DB34 /* AppConfigMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigMock.swift; sourceTree = "<group>"; };
+		BD05195428C403BB0051DB34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
+		BD05195828C4093A0051DB34 /* Strings-Posterr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings-Posterr.swift"; sourceTree = "<group>"; };
 		BD07657A28BBD4FE00725121 /* Posterr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posterr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD07657D28BBD4FE00725121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD07658628BBD50000725121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -243,6 +247,16 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		BD05195228C403370051DB34 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD05195828C4093A0051DB34 /* Strings-Posterr.swift */,
+				BD07658628BBD50000725121 /* Assets.xcassets */,
+				BD05195528C403BB0051DB34 /* Localization.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BD07657128BBD4FE00725121 = {
 			isa = PBXGroup;
 			children = (
@@ -270,12 +284,12 @@
 			children = (
 				BD07658B28BBD50000725121 /* Info.plist */,
 				BD07657D28BBD4FE00725121 /* AppDelegate.swift */,
-				BD07658628BBD50000725121 /* Assets.xcassets */,
 				BD2C16F228BF9B6100E0EF02 /* Common */,
 				BD05194728C3C64B0051DB34 /* Config */,
 				BDF96FA928BC0D4F004192D4 /* Database */,
 				BD07658828BBD50000725121 /* LaunchScreen.storyboard */,
 				BDF96FB528BCEEE2004192D4 /* Models */,
+				BD05195228C403370051DB34 /* Resources */,
 				BD237EF628BF73CD005307C5 /* Scenes */,
 				BDF96FB128BCEE96004192D4 /* Services */,
 			);
@@ -521,6 +535,7 @@
 				BD07657628BBD4FE00725121 /* Sources */,
 				BD07657728BBD4FE00725121 /* Frameworks */,
 				BD07657828BBD4FE00725121 /* Resources */,
+				BD05195128C402BA0051DB34 /* Swiftgen */,
 				BDF96FA528BBF0C6004192D4 /* SwiftLint */,
 				0D11C6F159D7E7FB50BF0986 /* [CP] Embed Pods Frameworks */,
 			);
@@ -622,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */,
+				BD05195328C403BB0051DB34 /* Localization.strings in Resources */,
 				BD05194928C3C6950051DB34 /* PosterrAppConfig.plist in Resources */,
 				BD237EED28BE3A52005307C5 /* posterr_test.db in Resources */,
 				BD07658A28BBD50000725121 /* LaunchScreen.storyboard in Resources */,
@@ -724,6 +740,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BD05195128C402BA0051DB34 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
 		BDF96FA528BBF0C6004192D4 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -821,6 +855,7 @@
 				BD38584428C02E6400CF9CB3 /* RepostTableViewCell.swift in Sources */,
 				BD237EFF28BF7446005307C5 /* HomeViewController.swift in Sources */,
 				BD38585A28C14BBA00CF9CB3 /* PostsTableViewDataSource.swift in Sources */,
+				BD05195928C4093A0051DB34 /* Strings-Posterr.swift in Sources */,
 				BD05194428C3B8840051DB34 /* Array+Posts.swift in Sources */,
 				BD05192E28C228A00051DB34 /* CreateRepostView.swift in Sources */,
 				BD38584928C0654500CF9CB3 /* ViewCodable.swift in Sources */,
@@ -872,6 +907,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BD05195528C403BB0051DB34 /* Localization.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD05195428C403BB0051DB34 /* en */,
+			);
+			name = Localization.strings;
+			sourceTree = "<group>";
+		};
 		BD07658828BBD50000725121 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

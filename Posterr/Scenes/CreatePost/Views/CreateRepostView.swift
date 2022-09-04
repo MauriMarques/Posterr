@@ -27,7 +27,7 @@ final class CreateRepostView: UIView {
   private lazy var createPostButton: UIButton = {
     let button = UIButton(type: .system)
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("Create", for: .normal)
+    button.setTitle(L10n.createButtonTitle, for: .normal)
     button.configuration = .filled()
     button.tintColor = .black
     button.addTarget(self,

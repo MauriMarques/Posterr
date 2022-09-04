@@ -64,7 +64,7 @@ final class ProfileViewController: UIViewController {
     super.init(nibName: nil,
                bundle: nil)
     postsTableViewDataSource.postsTableView = postsTableView
-    title = "Profile"
+    title = L10n.profileScreenTtle
   }
 
   override func viewDidLoad() {

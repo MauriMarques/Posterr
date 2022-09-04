@@ -1,0 +1,21 @@
+/* 
+  Localization.strings
+  Posterr
+
+  Created by Maurício Martinez Marques on 03/09/22.
+  
+*/
+
+"home_screen_title" = "Home";
+"profile_screen_ttle" = "Profile";
+"create_button_title" = "Create";
+"create_repost_button_title" = "Repost";
+"create_quote_button_title" = "Quote";
+"cancel_button_title" = "Cancel";
+"create_posts_content_placeholder_text" = "What's happening?";
+"create_posts_content_counter_text" = "%@/%@";
+"posts_empty_text" = "Nothing to show for now. \n\n\n Let's create some posts!";
+"posts_count_text" = "posts: %@";
+"quotes_count_text" = "quotes: %@";
+"reposts_count_text" = "reposts: %@";
+"account_createion_date_text" = "member since %@";
