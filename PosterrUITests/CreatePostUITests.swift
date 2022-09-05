@@ -66,7 +66,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
     app.buttons["home_compose_button"].tap()
     XCTAssert(app.staticTexts["Too many posts for today"].waitForExistence(timeout: timeout))
-    XCTAssert(app.staticTexts["Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow."].waitForExistence(timeout: timeout))
+    XCTAssert(app.staticTexts["Sorry, you have reached the 5 posts per day limit. But no worries, you can continue by tomorrow."].waitForExistence(timeout: timeout))
     XCTAssert(app.buttons["Ok"].waitForExistence(timeout: timeout))
   }
 
