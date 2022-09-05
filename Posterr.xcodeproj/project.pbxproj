@@ -81,6 +81,7 @@
 		BDE8514F28C55C9A008FFC67 /* ProfilePresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8514E28C55C9A008FFC67 /* ProfilePresenterSpy.swift */; };
 		BDE8515128C55DFA008FFC67 /* ProfileInteractorListenerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8515028C55DFA008FFC67 /* ProfileInteractorListenerMock.swift */; };
 		BDE8515428C55F0C008FFC67 /* PostType+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8515328C55F0C008FFC67 /* PostType+Equatable.swift */; };
+		BDE8515628C59FE5008FFC67 /* Date+TestDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE8515528C59FE5008FFC67 /* Date+TestDate.swift */; };
 		BDF96FAD28BC1CAF004192D4 /* posterr.db in Resources */ = {isa = PBXBuildFile; fileRef = BDF96FAC28BC1CAF004192D4 /* posterr.db */; };
 		BDF96FAF28BCECA3004192D4 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */; };
 		BDF96FB428BCEECB004192D4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF96FB328BCEECB004192D4 /* UserService.swift */; };
@@ -192,6 +193,7 @@
 		BDE8514E28C55C9A008FFC67 /* ProfilePresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenterSpy.swift; sourceTree = "<group>"; };
 		BDE8515028C55DFA008FFC67 /* ProfileInteractorListenerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractorListenerMock.swift; sourceTree = "<group>"; };
 		BDE8515328C55F0C008FFC67 /* PostType+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostType+Equatable.swift"; sourceTree = "<group>"; };
+		BDE8515528C59FE5008FFC67 /* Date+TestDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TestDate.swift"; sourceTree = "<group>"; };
 		BDF96FA628BBF384004192D4 /* libswift_Concurrency.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswift_Concurrency.tbd; path = usr/lib/swift/libswift_Concurrency.tbd; sourceTree = SDKROOT; };
 		BDF96FAC28BC1CAF004192D4 /* posterr.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = posterr.db; sourceTree = "<group>"; };
 		BDF96FAE28BCECA3004192D4 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 		BDE8515228C55EFD008FFC67 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				BDE8515528C59FE5008FFC67 /* Date+TestDate.swift */,
 				BDE8515328C55F0C008FFC67 /* PostType+Equatable.swift */,
 			);
 			path = Extensions;
@@ -894,6 +897,7 @@
 				BDE8514228C55349008FFC67 /* CreatePostPresenterSpy.swift in Sources */,
 				BD05196828C434630051DB34 /* ParentPostViewTests.swift in Sources */,
 				BD05194E28C3EF9B0051DB34 /* AppConfigMock.swift in Sources */,
+				BDE8515628C59FE5008FFC67 /* Date+TestDate.swift in Sources */,
 				BDE8514928C55B62008FFC67 /* ProfileBuilderTests.swift in Sources */,
 				BD05195D28C428A20051DB34 /* ProfileImageViewTests.swift in Sources */,
 				BDE8514F28C55C9A008FFC67 /* ProfilePresenterSpy.swift in Sources */,

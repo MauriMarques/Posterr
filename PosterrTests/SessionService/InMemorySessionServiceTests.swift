@@ -23,7 +23,7 @@ final class InMemorySessionServiceTests: XCTestCase {
   func testLoginUser() {
     let userToLogin = User(id: 1234,
                            name: "Username",
-                           creationTimestamp: Date().timeIntervalSince1970)
+                           creationTimestamp: Date.testDate.timeIntervalSince1970)
     _ = sut?.login(userToLogin)
     XCTAssertEqual(sut?.user, userToLogin)
   }

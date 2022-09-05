@@ -36,18 +36,18 @@ final class PostsTableViewTests: XCTestCase, SnapshotViewTestable {
   func testCellsLayout() {
     let creator = User(id: 1,
                        name: "creator",
-                       creationTimestamp: Date().timeIntervalSince1970)
+                       creationTimestamp: Date.testDate.timeIntervalSince1970)
     let post = Post(id: 1,
                     creator: creator,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Post content", parentPost: nil)
     let quote = Post(id: 2,
                     creator: creator,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Post content", parentPost: post)
     let repost = Post(id: 2,
                       creator: creator,
-                      creationTimestamp: Date().timeIntervalSince1970,
+                      creationTimestamp: Date.testDate.timeIntervalSince1970,
                       content: nil,
                       parentPost: post)
     dataSource?.posts = [post, quote, repost]

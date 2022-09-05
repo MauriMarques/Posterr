@@ -14,12 +14,12 @@ final class CreatePostViewControllerTests: XCTestCase {
 
   let creator = User(id: 1,
                      name: "creator",
-                     creationTimestamp: Date().timeIntervalSince1970)
+                     creationTimestamp: Date.testDate.timeIntervalSince1970)
 
   lazy var post = {
     Post(id: 1,
          creator: creator,
-         creationTimestamp: Date().timeIntervalSince1970,
+         creationTimestamp: Date.testDate.timeIntervalSince1970,
          content: "Post content", parentPost: nil)
   }()
 

@@ -58,7 +58,7 @@ final class HomeInteractorTests: XCTestCase {
     }
     let post = Post(id: 1,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Post",
                     parentPost: nil)
     sut?.didClickOnQuotePost(post)
@@ -71,7 +71,7 @@ final class HomeInteractorTests: XCTestCase {
     }
     let post = Post(id: 1,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Post",
                     parentPost: nil)
     sut?.didClickOnRepostPost(post)

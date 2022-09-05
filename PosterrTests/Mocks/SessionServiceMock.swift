@@ -11,5 +11,5 @@ import Foundation
 final class SessionServiceMock: SessionService {
   var user: User? = User(id: 1234,
                          name: "Username",
-                         creationTimestamp: Date().timeIntervalSince1970)
+                         creationTimestamp: Date.testDate.timeIntervalSince1970)
 }

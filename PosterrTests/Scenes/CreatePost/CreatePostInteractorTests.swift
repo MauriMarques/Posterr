@@ -74,7 +74,7 @@ final class CreatePostInteractorTests: XCTestCase {
     }
     let post = Post(id: 1,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Post content",
                     parentPost: nil)
     postServiceMock.createdPost = post
@@ -88,7 +88,7 @@ final class CreatePostInteractorTests: XCTestCase {
     }
     let parentPost = Post(id: 1,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Post content",
                     parentPost: nil)
     sut = CreatePostInteractor(presenter: createPostPresenterSpy,
@@ -99,7 +99,7 @@ final class CreatePostInteractorTests: XCTestCase {
     sut?.listener = createPostInteractorListenerMock
     let post = Post(id: 2,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Quote content",
                     parentPost: parentPost)
     postServiceMock.createdPost = post
@@ -113,7 +113,7 @@ final class CreatePostInteractorTests: XCTestCase {
     }
     let parentPost = Post(id: 1,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Post content",
                     parentPost: nil)
     sut = CreatePostInteractor(presenter: createPostPresenterSpy,
@@ -124,7 +124,7 @@ final class CreatePostInteractorTests: XCTestCase {
     sut?.listener = createPostInteractorListenerMock
     let post = Post(id: 2,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: nil,
                     parentPost: parentPost)
     postServiceMock.createdPost = post
@@ -138,12 +138,12 @@ final class CreatePostInteractorTests: XCTestCase {
     }
     let parentParentPost = Post(id: 1,
                                 creator: user,
-                                creationTimestamp: Date().timeIntervalSince1970,
+                                creationTimestamp: Date.testDate.timeIntervalSince1970,
                                 content: "Post content",
                                 parentPost: nil)
     let parentPost = Post(id: 2,
                           creator: user,
-                          creationTimestamp: Date().timeIntervalSince1970,
+                          creationTimestamp: Date.testDate.timeIntervalSince1970,
                           content: "Quote content",
                           parentPost: parentParentPost)
     sut = CreatePostInteractor(presenter: createPostPresenterSpy,
@@ -154,7 +154,7 @@ final class CreatePostInteractorTests: XCTestCase {
     sut?.listener = createPostInteractorListenerMock
     let post = Post(id: 3,
                           creator: user,
-                          creationTimestamp: Date().timeIntervalSince1970,
+                          creationTimestamp: Date.testDate.timeIntervalSince1970,
                           content: "Quote content",
                           parentPost: parentPost)
     postServiceMock.createdPost = post
@@ -168,12 +168,12 @@ final class CreatePostInteractorTests: XCTestCase {
     }
     let parentParentPost = Post(id: 1,
                                 creator: user,
-                                creationTimestamp: Date().timeIntervalSince1970,
+                                creationTimestamp: Date.testDate.timeIntervalSince1970,
                                 content: "Post content",
                                 parentPost: nil)
     let parentPost = Post(id: 2,
                           creator: user,
-                          creationTimestamp: Date().timeIntervalSince1970,
+                          creationTimestamp: Date.testDate.timeIntervalSince1970,
                           content: nil,
                           parentPost: parentParentPost)
     sut = CreatePostInteractor(presenter: createPostPresenterSpy,
@@ -184,7 +184,7 @@ final class CreatePostInteractorTests: XCTestCase {
     sut?.listener = createPostInteractorListenerMock
     let post = Post(id: 3,
                     creator: user,
-                    creationTimestamp: Date().timeIntervalSince1970,
+                    creationTimestamp: Date.testDate.timeIntervalSince1970,
                     content: "Quote content",
                     parentPost: parentPost)
     postServiceMock.createdPost = post
@@ -198,12 +198,12 @@ final class CreatePostInteractorTests: XCTestCase {
     }
     let parentParentPost = Post(id: 1,
                                 creator: user,
-                                creationTimestamp: Date().timeIntervalSince1970,
+                                creationTimestamp: Date.testDate.timeIntervalSince1970,
                                 content: "Post content",
                                 parentPost: nil)
     let parentPost = Post(id: 2,
                           creator: user,
-                          creationTimestamp: Date().timeIntervalSince1970,
+                          creationTimestamp: Date.testDate.timeIntervalSince1970,
                           content: "Quote content",
                           parentPost: parentParentPost)
     sut = CreatePostInteractor(presenter: createPostPresenterSpy,
@@ -214,7 +214,7 @@ final class CreatePostInteractorTests: XCTestCase {
     sut?.listener = createPostInteractorListenerMock
     let post = Post(id: 3,
                           creator: user,
-                          creationTimestamp: Date().timeIntervalSince1970,
+                          creationTimestamp: Date.testDate.timeIntervalSince1970,
                           content: nil,
                           parentPost: parentPost)
     postServiceMock.createdPost = post
@@ -228,12 +228,12 @@ final class CreatePostInteractorTests: XCTestCase {
     }
     let parentParentPost = Post(id: 1,
                                 creator: user,
-                                creationTimestamp: Date().timeIntervalSince1970,
+                                creationTimestamp: Date.testDate.timeIntervalSince1970,
                                 content: "Post content",
                                 parentPost: nil)
     let parentPost = Post(id: 2,
                           creator: user,
-                          creationTimestamp: Date().timeIntervalSince1970,
+                          creationTimestamp: Date.testDate.timeIntervalSince1970,
                           content: nil,
                           parentPost: parentParentPost)
     sut = CreatePostInteractor(presenter: createPostPresenterSpy,
@@ -244,7 +244,7 @@ final class CreatePostInteractorTests: XCTestCase {
     sut?.listener = createPostInteractorListenerMock
     let post = Post(id: 3,
                           creator: user,
-                          creationTimestamp: Date().timeIntervalSince1970,
+                          creationTimestamp: Date.testDate.timeIntervalSince1970,
                           content: nil,
                           parentPost: parentPost)
     postServiceMock.createdPost = post
