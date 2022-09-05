@@ -95,5 +95,6 @@ extension HomeRouter: ProfileInteractableListerner {
       return
     }
     profileRouter = nil
+    interactor.reloadHome()
   }
 }

@@ -107,7 +107,7 @@ extension CreatePostViewController: CreatePostPresentable {
 
   func showPostsCreationLimitReachedAlert() {
     let alert = UIAlertController(title: L10n.createPostsLimitReachedTitle,
-                                  message: L10n.createPostsLimitReachedText,
+                                  message: L10n.createPostsLimitReachedText(appConfig.limitOfPostsPerDay),
                                   preferredStyle: .alert)
 
     alert.addAction(UIAlertAction(title: L10n.okButtonTitle,

@@ -24,8 +24,10 @@ internal enum L10n {
   }
   /// What's happening?
   internal static let createPostsContentPlaceholderText = L10n.tr("Localization", "create_posts_content_placeholder_text", fallback: "What's happening?")
-  /// Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow.
-  internal static let createPostsLimitReachedText = L10n.tr("Localization", "create_posts_limit_reached_text", fallback: "Sorry, you have reached the 4 posts per day limit. But no worries, you can continue by tomorrow.")
+  /// Sorry, you have reached the %@ posts per day limit. But no worries, you can continue by tomorrow.
+  internal static func createPostsLimitReachedText(_ p1: Any) -> String {
+    return L10n.tr("Localization", "create_posts_limit_reached_text", String(describing: p1), fallback: "Sorry, you have reached the %@ posts per day limit. But no worries, you can continue by tomorrow.")
+  }
   /// Too many posts for today
   internal static let createPostsLimitReachedTitle = L10n.tr("Localization", "create_posts_limit_reached_title", fallback: "Too many posts for today")
   /// Quote
