@@ -23,7 +23,7 @@ final class ProfileUITests: PosterrUITests {
     app.launch()
     app.otherElements["profile_bar_view"].tap()
     app.buttons["profile_compose_button"].tap()
-    XCTAssert(app.textFields["content_text_field"].waitForExistence(timeout: timeout))
+    XCTAssert(app.textViews["content_text_view"].waitForExistence(timeout: timeout))
     XCTAssert(app.buttons["create_button"].waitForExistence(timeout: timeout))
   }
 }

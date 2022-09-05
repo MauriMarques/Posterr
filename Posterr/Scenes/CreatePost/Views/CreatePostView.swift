@@ -15,18 +15,17 @@ protocol CreatePostViewDelegate: AnyObject {
 final class CreatePostView: UIView {
 
   struct AccessibilityIdentifier {
-    static let contentTextField = "content_text_field"
+    static let contentTextView = "content_text_view"
     static let createButton = "create_button"
   }
 
-  private lazy var contentTextField: UITextField = {
-    let textField = UITextField()
-    textField.translatesAutoresizingMaskIntoConstraints = false
-    textField.placeholder = L10n.createPostsContentPlaceholderText
-    textField.contentVerticalAlignment = .top
-    textField.delegate = self
-    textField.accessibilityIdentifier = AccessibilityIdentifier.contentTextField
-    return textField
+  private lazy var contentTextView: UITextView = {
+    let textView = UITextView()
+    textView.translatesAutoresizingMaskIntoConstraints = false
+    textView.font = .systemFont(ofSize: 18.0)
+    textView.delegate = self
+    textView.accessibilityIdentifier = AccessibilityIdentifier.contentTextView
+    return textView
   }()
 
   private lazy var parentPostView: ParentPostView = {
@@ -84,7 +83,7 @@ final class CreatePostView: UIView {
   }
 
   override func becomeFirstResponder() -> Bool {
-    contentTextField.becomeFirstResponder()
+    contentTextView.becomeFirstResponder()
   }
 
   @objc
@@ -98,7 +97,7 @@ final class CreatePostView: UIView {
 
 extension CreatePostView: ViewCodable {
   func buildViewHierarchy() {
-    addSubview(contentTextField)
+    addSubview(contentTextView)
 
     if parentPostViewModel != nil {
       addSubview(parentPostView)
@@ -109,12 +108,12 @@ extension CreatePostView: ViewCodable {
 
   func setupConstraints() {
     NSLayoutConstraint.activate([
-      contentTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0),
-      contentTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20.0),
-      contentTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-      contentTextField.heightAnchor.constraint(equalToConstant: 200.0),
-      createPostButton.trailingAnchor.constraint(equalTo: contentTextField.trailingAnchor),
-      createPostButton.topAnchor.constraint(equalTo: contentTextField.bottomAnchor, constant: 20.0),
+      contentTextView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.0),
+      contentTextView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20.0),
+      contentTextView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+      contentTextView.heightAnchor.constraint(equalToConstant: 200.0),
+      createPostButton.trailingAnchor.constraint(equalTo: contentTextView.trailingAnchor),
+      createPostButton.topAnchor.constraint(equalTo: contentTextView.bottomAnchor, constant: 20.0),
       charactersCounterLabel.trailingAnchor.constraint(equalTo: createPostButton.leadingAnchor, constant: -10.0),
       charactersCounterLabel.centerYAnchor.constraint(equalTo: createPostButton.centerYAnchor)
     ])
@@ -137,29 +136,25 @@ extension CreatePostView: ViewCodable {
   }
 }
 
-extension CreatePostView: UITextFieldDelegate {
+extension CreatePostView: UITextViewDelegate {
 
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    didClickOnCreatePost()
-    return true
-  }
-
-  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-    guard string.count <= maxCharactersAllowed else {
+  func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    guard text.count <= maxCharactersAllowed else {
       return false
     }
 
-    guard let textFieldText = textField.text else {
+    guard let textFieldText = textView.text else {
       return false
     }
 
-    var textAfterChange = textFieldText + string
-    if string.isEmpty {
+    var textAfterChange = textFieldText + text
+    if text.isEmpty, textAfterChange.count >= 1 {
       textAfterChange.removeLast()
     }
 
     if textAfterChange.count <= maxCharactersAllowed {
       contentText = textAfterChange
+      textView.textColor = .black
       return true
     }
     return false

@@ -16,7 +16,7 @@ final class CreatePostUITests: PosterrUITests {
     let postContent = "My first post!"
 
     app.buttons["home_compose_button"].tap()
-    app.textFields["content_text_field"].typeText(postContent)
+    app.textViews["content_text_view"].typeText(postContent)
     app.buttons["create_button"].tap()
 
     XCTAssert(app.tables.cells.element(matching: .cell,
@@ -31,7 +31,7 @@ final class CreatePostUITests: PosterrUITests {
 
     app.otherElements["profile_bar_view"].tap()
     app.buttons["profile_compose_button"].tap()
-    app.textFields["content_text_field"].typeText(postContent)
+    app.textViews["content_text_view"].typeText(postContent)
     app.buttons["create_button"].tap()
 
     XCTAssert(app.tables.cells.element(matching: .cell,
@@ -55,7 +55,7 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 """
-    app.textFields["content_text_field"].doubleTap()
+    app.textViews["content_text_view"].doubleTap()
     app.menuItems["Paste"].tap()
     XCTAssertFalse(app.buttons["create_button"].isEnabled)
   }
@@ -80,7 +80,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
                              identifier: "post_cell").tap()
 
     app.buttons["Quote"].tap()
-    app.textFields["content_text_field"].typeText(quoteContent)
+    app.textViews["content_text_view"].typeText(quoteContent)
 
     XCTAssert(app.otherElements["parent_post_view"].waitForExistence(timeout: timeout))
 
@@ -125,7 +125,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
     XCTAssert(app.otherElements["parent_post_view"].waitForExistence(timeout: timeout))
 
-    app.textFields["content_text_field"].typeText(quoteContent)
+    app.textViews["content_text_view"].typeText(quoteContent)
     app.buttons["create_button"].tap()
 
     for _ in 0..<2 {
@@ -169,7 +169,7 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 
     XCTAssert(app.otherElements["parent_post_view"].waitForExistence(timeout: timeout))
 
-    app.textFields["content_text_field"].typeText(quoteContent)
+    app.textViews["content_text_view"].typeText(quoteContent)
     app.buttons["create_button"].tap()
 
     XCTAssert(app.tables.cells.element(matching: .cell,

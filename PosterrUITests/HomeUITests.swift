@@ -31,7 +31,7 @@ final class HomeUITests: PosterrUITests {
   func testTapComposeButton() {
     app.launch()
     app.buttons["home_compose_button"].tap()
-    XCTAssert(app.textFields["content_text_field"].waitForExistence(timeout: timeout))
+    XCTAssert(app.textViews["content_text_view"].waitForExistence(timeout: timeout))
     XCTAssert(app.buttons["create_button"].waitForExistence(timeout: timeout))
   }
 }

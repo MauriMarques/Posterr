@@ -25,7 +25,7 @@ final class CreatePostViewController: UIViewController {
   struct AccessibilityIdentifier {
     static let cancelButton = "create_post_cancel_button"
     static let createButton = "create_post_create_button"
-    static let contentTextField = CreatePostView.AccessibilityIdentifier.contentTextField
+    static let contentTextField = CreatePostView.AccessibilityIdentifier.contentTextView
     static let parentPostView = ParentPostView.AccessibilityIdentifier.`self`
   }
 
