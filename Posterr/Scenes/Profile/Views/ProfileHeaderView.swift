@@ -69,6 +69,7 @@ extension ProfileHeaderView: ViewModelSettable {
     profileImageView.setImageByUserName(viewModel.userName)
     userNameLabel.text = viewModel.userName
 
+    accountInfoStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     let postsCountLabel = UILabel()
     postsCountLabel.text = L10n.postsCountText(viewModel.createdPostsCount)
     accountInfoStackView.addArrangedSubview(postsCountLabel)

@@ -11,7 +11,7 @@ import SQLite
 struct UserTableFields {
   static let idField = Expression<Int64>("id")
   static let nameField = Expression<String>("name")
-  static let creationTimestampField = Expression<TimeInterval>("creation_timestamp")
+  static let creationTimestampField = Expression<TimeInterval>("user_creation_timestamp")
 }
 
 struct UserSQLService: UserService {

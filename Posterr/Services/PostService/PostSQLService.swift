@@ -11,7 +11,7 @@ import SQLite
 struct PostTableFields {
   static let idField = Expression<Int64>("id")
   static let creatorIdField = Expression<Int64>("creator_id")
-  static let creationTimestampField = Expression<TimeInterval>("creation_timestamp")
+  static let creationTimestampField = Expression<TimeInterval>("post_creation_timestamp")
   static let contentField = Expression<String?>("content")
   static let parentPostIdField = Expression<Int64?>("parent_post_id")
 }
@@ -108,7 +108,6 @@ struct PostSQLService: PostService {
       return []
     }
 
-    let postTable = Table("Post")
     let userTable = Table("User")
 
     do {
@@ -121,9 +120,10 @@ struct PostSQLService: PostService {
                            creationTimestamp: TimeInterval(postRegister[userTable[UserTableFields.creationTimestampField]]))
 
         var parentPost: Post?
+        let noFieltrsPostTable = Table("Post")
         if let parentPostId = postRegister[postTable[PostTableFields.parentPostIdField]] {
-          let parentPostQuery = postTable.filter(postTable[PostTableFields.idField] == parentPostId)
-            .join(userTable, on: userTable[UserTableFields.idField] == postTable[PostTableFields.creatorIdField])
+          let parentPostQuery = noFieltrsPostTable.filter(noFieltrsPostTable[PostTableFields.idField] == parentPostId)
+            .join(userTable, on: userTable[UserTableFields.idField] == noFieltrsPostTable[PostTableFields.creatorIdField])
 
           if let parentPostRegister = try? database.pluck(parentPostQuery) {
             let creationTimestamp = TimeInterval(parentPostRegister[userTable[UserTableFields.creationTimestampField]])
@@ -132,8 +132,8 @@ struct PostSQLService: PostService {
                                          creationTimestamp: creationTimestamp)
             parentPost = Post(id: parentPostId,
                               creator: parentPostCreator,
-                              creationTimestamp: TimeInterval(parentPostRegister[postTable[PostTableFields.creationTimestampField]]),
-                              content: parentPostRegister[postTable[PostTableFields.contentField]],
+                              creationTimestamp: TimeInterval(parentPostRegister[noFieltrsPostTable[PostTableFields.creationTimestampField]]),
+                              content: parentPostRegister[noFieltrsPostTable[PostTableFields.contentField]],
                               parentPost: nil)
           }
         }
@@ -146,6 +146,7 @@ struct PostSQLService: PostService {
         return post
       }
     } catch {
+      print(error)
       return []
     }
   }
