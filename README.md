@@ -1,4 +1,4 @@
-# Posterr
+# Mauricio Martinez Marques - Posterr
 ---
 #### Environment Setup
 
@@ -16,6 +16,16 @@ bundle install
 ```
 bundle exec pod install
 ```
+
+#### How to use Posterr
+
+1. Selecting the user
+
+* Go to the `PosterrAppConfig.plist` file and under the `USERS` dictionary, set to `YES` the `IS_LOGGED` property of the user you want to use.
+[Selecting_the_user.mp4](videos/Selecting_the_user.mp4)
+
+2. Creating and interacting with posts
+[How_to_use_Posterr.mp4](videos/How_to_use_Posterr.mp4)
 
 #### Running tests
 
@@ -36,4 +46,14 @@ bunde exec fastlane run_UItests
 bunde exec fastlane run_all_tests
 ```
 
-* Check for coverage Slather report at `./fastlane/slather_coverage/index.html`
+* Check for coverage Slather report at [./fastlane/slather_coverage/index.html](./fastlane/slather_coverage/index.html)
+
+#### Critique (missing points)
+
+* Improve UI style, colors, fonts and icons
+* Add app icon image
+* Add Launch screen
+* Add loading states for the services request
+* Abstract some router and presenter behaviors to base implementations, in order to achieve more reusability
+* Add more UI test cases changing the users
+* Add pre-commit routine to run tests
