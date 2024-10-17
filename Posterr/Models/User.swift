@@ -13,8 +13,4 @@ struct User {
   let creationTimestamp: TimeInterval
 }
 
-extension User: Equatable {
-  static func == (lhs: Self, rhs: Self) -> Bool {
-    (lhs.id == rhs.id && lhs.name == rhs.name && lhs.creationTimestamp == rhs.creationTimestamp)
-  }
-}
+extension User: Equatable {}

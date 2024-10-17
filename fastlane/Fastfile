@@ -18,7 +18,7 @@ platform :ios do
     scan(
       workspace: "Posterr.xcworkspace",
       scheme: "PosterrTests",
-      destination: "platform=iOS Simulator,name=iPhone 12 Pro,OS=15.0",
+      destination: "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.2",
       clean: true,
       code_coverage: true,
       output_directory: "fastlane/test_output"
@@ -37,7 +37,7 @@ platform :ios do
     scan(
       workspace: "Posterr.xcworkspace",
       scheme: "PosterrUITests",
-      destination: "platform=iOS Simulator,name=iPhone 12 Pro,OS=15.0",
+      destination: "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.2",
       clean: true,
       code_coverage: true,
       output_directory: "fastlane/test_output"
@@ -56,7 +56,7 @@ platform :ios do
     scan(
       workspace: "Posterr.xcworkspace",
       scheme: "Posterr",
-      destination: "platform=iOS Simulator,name=iPhone 12 Pro,OS=15.0",
+      destination: "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.2",
       clean: true,
       code_coverage: true,
       output_directory: "fastlane/test_output"
